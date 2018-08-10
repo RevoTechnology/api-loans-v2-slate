@@ -1,5 +1,3 @@
---- 
-
 title: Revo API 
 
 language_tabs: 
@@ -14,7 +12,7 @@ toc_footers:
  -->
 search: true 
 
---- 
+
 
 # Introduction 
 
