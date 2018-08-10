@@ -1,39 +1,41 @@
-title: Revo API 
+title: Revo API
 
-language_tabs: 
-   - shell 
+language_tabs:
+   - shell
 
-toc_footers: 
-   - <a href='#'>Sign Up for a Developer Key</a> 
-   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> 
+toc_footers:
+   - <a href='#'>Sign Up for a Developer Key</a>
+   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a>
 
-<!-- includes: 
-   - errors 
+<!-- includes:
+   - errors
  -->
-search: true 
+search: true
 
 
 
-# Introduction 
+# Introduction
 
-Revo API for merchant APP. 
+ХУЙ!
 
-**Version:** 2.0.0.beta 
+Revo API for merchant APP.
 
-# Authentication 
+**Version:** 2.0.0.beta
+
+# Authentication
 
 |apiKey|*API Key*|
-|---|---| 
+|---|---|
 
 # /SESSIONS
-## ***POST*** 
+## ***POST***
 
 **Summary:** Creates agent session.
 
 **Description:** Returns token for next requests.
 
-### HTTP Request 
-`***POST*** /sessions` 
+### HTTP Request
+`***POST*** /sessions`
 
 **Parameters**
 
@@ -49,14 +51,14 @@ Revo API for merchant APP.
 | 401 | Invalid credetials |
 | 422 | Unprocessible entity |
 
-## ***DELETE*** 
+## ***DELETE***
 
 **Summary:** Destroy agent session
 
 **Description:** Remove current agent token
 
-### HTTP Request 
-`***DELETE*** /sessions` 
+### HTTP Request
+`***DELETE*** /sessions`
 
 **Responses**
 
@@ -66,14 +68,14 @@ Revo API for merchant APP.
 | 401 | Unauthorized |
 
 # /PASSWORDS
-## ***POST*** 
+## ***POST***
 
 **Summary:** Send confirmation code
 
 **Description:** Send confirmation code to agent phone
 
-### HTTP Request 
-`***POST*** /passwords` 
+### HTTP Request
+`***POST*** /passwords`
 
 **Parameters**
 
@@ -88,14 +90,14 @@ Revo API for merchant APP.
 | 200 | successful operation |
 | 422 | Unprocessible entity |
 
-## ***PUT*** 
+## ***PUT***
 
 **Summary:** Set new agent pin
 
 **Description:** Check confirmation code, set new pin and return api_key
 
-### HTTP Request 
-`***PUT*** /passwords` 
+### HTTP Request
+`***PUT*** /passwords`
 
 **Parameters**
 
@@ -111,14 +113,14 @@ Revo API for merchant APP.
 | 422 | Unprocessible entity |
 
 # /AGENT
-## ***GET*** 
+## ***GET***
 
 **Summary:** Get agent info
 
 **Description:** Returns basic agent information
 
-### HTTP Request 
-`***GET*** /agent` 
+### HTTP Request
+`***GET*** /agent`
 
 **Responses**
 
@@ -128,14 +130,14 @@ Revo API for merchant APP.
 | 401 | Unauthorized |
 
 # /STORES/{ID}/REPORTS
-## ***GET*** 
+## ***GET***
 
 **Summary:** Get agent reports
 
 **Description:** Returns agent sales report by period for store
 
-### HTTP Request 
-`***GET*** /stores/{id}/reports` 
+### HTTP Request
+`***GET*** /stores/{id}/reports`
 
 **Parameters**
 
@@ -153,14 +155,14 @@ Revo API for merchant APP.
 | 401 | Unauthorized |
 
 # /STORES/{ID}
-## ***GET*** 
+## ***GET***
 
 **Summary:** Get store information
 
 **Description:** Returns store information
 
-### HTTP Request 
-`***GET*** /stores/{id}` 
+### HTTP Request
+`***GET*** /stores/{id}`
 
 **Parameters**
 
@@ -176,14 +178,14 @@ Revo API for merchant APP.
 | 401 | Unauthorized |
 
 # /LOAN_REQUESTS
-## ***POST*** 
+## ***POST***
 
 **Summary:** Create loan request
 
 **Description:** Create loan request record and return token
 
-### HTTP Request 
-`***POST*** /loan_requests` 
+### HTTP Request
+`***POST*** /loan_requests`
 
 **Parameters**
 
@@ -200,14 +202,14 @@ Revo API for merchant APP.
 | 422 | Unprocessible entity |
 
 # /LOAN_REQUESTS/{TOKEN}
-## ***GET*** 
+## ***GET***
 
 **Summary:** Get tariff information
 
 **Description:** Get information about tariff and terms
 
-### HTTP Request 
-`***GET*** /loan_requests/{token}` 
+### HTTP Request
+`***GET*** /loan_requests/{token}`
 
 **Parameters**
 
@@ -222,14 +224,14 @@ Revo API for merchant APP.
 | 200 | successful operation |
 | 422 | unproccesable entity |
 
-## ***PUT*** 
+## ***PUT***
 
 **Summary:** Update loan_request
 
 **Description:** Update phone or sum for loan_request
 
-### HTTP Request 
-`***PUT*** /loan_requests/{token}` 
+### HTTP Request
+`***PUT*** /loan_requests/{token}`
 
 **Parameters**
 
@@ -246,14 +248,14 @@ Revo API for merchant APP.
 | 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/CLIENT
-## ***GET*** 
+## ***GET***
 
 **Summary:** Client information
 
 **Description:** Check client for loan_request
 
-### HTTP Request 
-`***GET*** /loan_requests/{token}/client` 
+### HTTP Request
+`***GET*** /loan_requests/{token}/client`
 
 **Parameters**
 
@@ -268,14 +270,14 @@ Revo API for merchant APP.
 | 200 | successful operation |
 | 422 | unprocessable entity |
 
-## ***POST*** 
+## ***POST***
 
 **Summary:** Create client
 
 **Description:** Create client for loan_request
 
-### HTTP Request 
-`***POST*** /loan_requests/{token}/client` 
+### HTTP Request
+`***POST*** /loan_requests/{token}/client`
 
 **Parameters**
 
@@ -292,14 +294,14 @@ Revo API for merchant APP.
 | 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/CONFIRMATION
-## ***POST*** 
+## ***POST***
 
 **Summary:** Confirm client
 
 **Description:** Confirm client by code
 
-### HTTP Request 
-`***POST*** /loan_requests/{token}/confirmation` 
+### HTTP Request
+`***POST*** /loan_requests/{token}/confirmation`
 
 **Parameters**
 
@@ -316,14 +318,14 @@ Revo API for merchant APP.
 | 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/CLIENT/CONFIRMATION
-## ***POST*** 
+## ***POST***
 
 **Summary:** Send confirmation code
 
 **Description:** Send confirmation code to client
 
-### HTTP Request 
-`***POST*** /loan_requests/{token}/client/confirmation` 
+### HTTP Request
+`***POST*** /loan_requests/{token}/client/confirmation`
 
 **Parameters**
 
@@ -339,14 +341,14 @@ Revo API for merchant APP.
 | 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/LOAN
-## ***POST*** 
+## ***POST***
 
 **Summary:** Create approved loan
 
 **Description:** Create LoanApplication with `approved` status
 
-### HTTP Request 
-`***POST*** /loan_requests/{token}/loan` 
+### HTTP Request
+`***POST*** /loan_requests/{token}/loan`
 
 **Parameters**
 
@@ -362,14 +364,14 @@ Revo API for merchant APP.
 | 200 | successful operation |
 
 # /LOAN_REQUESTS/{TOKEN}/LOAN/FINALIZATION
-## ***POST*** 
+## ***POST***
 
 **Summary:** Finalize loan
 
 **Description:** Finalize LoanApplication
 
-### HTTP Request 
-`***POST*** /loan_requests/{token}/loan/finalization` 
+### HTTP Request
+`***POST*** /loan_requests/{token}/loan/finalization`
 
 **Parameters**
 
@@ -386,14 +388,14 @@ Revo API for merchant APP.
 | 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/DOCUMENTS/{KIND}
-## ***GET*** 
+## ***GET***
 
 **Summary:** Get documents
 
 **Description:** Load loan documents by kind
 
-### HTTP Request 
-`***GET*** /loan_requests/{token}/documents/{kind}` 
+### HTTP Request
+`***GET*** /loan_requests/{token}/documents/{kind}`
 
 **Parameters**
 
