@@ -16,7 +16,7 @@ search: true
 
 # Introduction
 
-ХУЙ!
+test
 
 Revo API for merchant APP.
 
