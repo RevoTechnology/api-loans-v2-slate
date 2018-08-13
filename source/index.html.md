@@ -296,6 +296,18 @@ POST BASE_URL/sessions?store_id=STORE_ID1&signature=SIGNATURE
   <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
   <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
 
+## POST loan_requests
+## GET loan_requests/{token}
+## PUT loan_requests/{token}
+## GET loan_requests/{token}/client
+## POST loan_requests/{token}/client
+## PATCH loan_requests/{token}/client
+## POST loan_requests/{token}/confirmation
+## POST loan_requests/{token}/client/confirmation
+## POST loan_requests/{token}/loan
+## POST loan_requests/{token}/loan/finalization
+## GET loan_requests/{token}/documents/{kind}
+
 # Коды ошибок
 
 Код | Сообщение | Комментарии
