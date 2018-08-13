@@ -1,3 +1,4 @@
+
 title: Revo API 
 
 language_tabs: 
@@ -7,9 +8,11 @@ toc_footers:
    - <a href='#'>Sign Up for a Developer Key</a> 
    - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> 
 
-<!-- includes: 
+<!-- 
+includes: 
    - errors 
  -->
+ 
 search: true 
 
 
@@ -214,6 +217,7 @@ Revo API for merchant APP.
 | Name | Located in | Description | Required | Type |
 | ---- | ---------- | ----------- | -------- | ---- |
 | token | path | Loan request unique token | Yes | string |
+| amount | query | Amount | No | number |
 
 **Responses**
 
@@ -291,6 +295,34 @@ Revo API for merchant APP.
 | 200 | successful operation |
 | 422 | unprocessable entity |
 
+## ***PATCH*** 
+
+**Summary:** Upload documents
+
+**Description:** Upload documents photo for client
+
+### HTTP Request 
+`***PATCH*** /loan_requests/{token}/client` 
+
+**Parameters**
+
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| token | path |  | Yes | string |
+| client[documents][name] | formData | Photo with client's name and photo | No | file |
+| client[documents][living_addr] | formData | Photo with registration address | No | file |
+| client[documents][client_with_passport] | formData | Photo for client with passport | No | file |
+| client[documents][previous_passport] | formData | Photo for previous clien's name and photo | No | file |
+| client[documents][issued_by] | formData | Photo for 'issued by' page | No | file |
+| client[documents][first_two_pages] | formData | Photo for first two passport pages | No | file |
+
+**Responses**
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | successful operation |
+| 422 | unprocessable entity |
+
 # /LOAN_REQUESTS/{TOKEN}/CONFIRMATION
 ## ***POST*** 
 
@@ -360,6 +392,7 @@ Revo API for merchant APP.
 | Code | Description |
 | ---- | ----------- |
 | 200 | successful operation |
+| 422 | unprocessable entity |
 
 # /LOAN_REQUESTS/{TOKEN}/LOAN/FINALIZATION
 ## ***POST*** 
