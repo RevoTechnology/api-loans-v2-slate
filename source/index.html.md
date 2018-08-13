@@ -245,7 +245,7 @@ POST BASE_URL/api/loans/v1/loan_requests
 | | | |
 -:|-:|:-|:-
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
-  <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентефикатор торговой точки.
+  <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
 
 ###Response Parameters
 
@@ -296,11 +296,13 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
   "loan_request":
   [
     {
+      "term_id": 2,
       "term": 3,
       "monthly_payment": 2945,
       "total_of_payments": 8833,
       "sum_with_discount": 6399,
       "total_overpayment": 2434,
+      "sms_info": 59,
       "schedule":
       [
         {
@@ -324,11 +326,13 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
 | | | | | |
 -:|-:|-:|:-|:-|:-
  | **loan_request**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о расчёте доступных продуктов.
+ <td colspan="2" style="text-align:right">**term_id**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Номер продукта.
  <td colspan="2" style="text-align:right">**term**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Срок рассрочки в месяцах.
  <td colspan="2" style="text-align:right">**monthly_payment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Величина ежемесячного платежа с учётом переплаты.
  <td colspan="2" style="text-align:right">**total_of_payments**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма к погашению займа (с учётом переплат).
  <td colspan="2" style="text-align:right">**sum_with_discount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).
  <td colspan="2" style="text-align:right">**total_overpayment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма переплаты за весь период займа.
+ <td colspan="2" style="text-align:right">**sms_info**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость услуги смс-информирования.
  <td colspan="2" style="text-align:right">**schedule**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о графике платежей.
  <td colspan="3" style="text-align:right">**date**<br> <font color="#939da3">string</font> | | | Дата платежа в формате `dd-mm-yyyy`.
  <td colspan="3" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | | Величина платежа клиента в месяц в рублях с копейками. Последний платёж может отличаться от предыдущих.
@@ -785,13 +789,13 @@ POST  BASE_URL/api/loans/v1/loan_requests/{token}/loan
 
 ```jsonnet
 {
-  "term": 3
+  "term_id": 2
 }
 ```
 
  | |
 -:|:-
-**term**<br> <font color="#939da3">integer</font> | Срок рассрочки в месяцах.
+**term_id**<br> <font color="#939da3">integer</font> | Номер продукта.
 
 ### Response Parameters
 
@@ -829,7 +833,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
 {
   "loan":
   {
-    "agree_processing": "1",
+    "agree_sms_info": true,
+    "agree_processing": true,
     "confirmation_code": "1111"
   }
 }
@@ -838,7 +843,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
 | | | |
 -:|-:|:-|:-
  |**loan**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
-  <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">string</font> | | Согласие клиента с условиями.
+  <td colspan="2" style="text-align:right">**agree_sms_info**<br> <font color="#939da3">boolean</font> | | Согласие клиента с подключением платного смс-информирования.
+  <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">boolean</font> | | Согласие клиента с оформлением договора.
   <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Четырёхзначный код подтверждения.
 
 ###Response Parameters
