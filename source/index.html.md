@@ -297,16 +297,722 @@ POST BASE_URL/sessions?store_id=STORE_ID1&signature=SIGNATURE
   <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
 
 ## POST loan_requests
+
+```ruby
+POST BASE_URL/loan_requests?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для создания займа. Возвращает токен, с помощью которого можно обращаться к другим методам API.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  "loan_request":
+  {
+    "store_id": "1234"
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
+  <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентефикатор торговой точки.
+
+###Response Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{
+  "loan_request":
+  {
+    "token": "b4e9d33f6021ad31a1b494ffb7be29069d580dfc"
+  }
+}
+```
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "store_id": ["не найден"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
+ <td colspan="2" style="text-align:right">**authentication_token**<br> <font color="#939da3">string</font> | | Токен для последующего обращения к методам API.
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
 ## GET loan_requests/{token}
+
+```ruby
+GET BASE_URL/loan_requests/{token}?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для получения доступный графиков платежей для займа.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  ???
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
+  <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентефикатор торговой точки.
+
+###Response Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{
+  "loan_request":
+  [
+    {
+      "term": "3",
+      "monthly_payment": "80",
+      "total_of_payments": "240",
+      "sum_with_discount": "210",
+      "total_overpayment": "15",
+      "schedule":
+      [
+        {
+          "date": "09-03-2018",
+          "amount": "80"
+        }
+      ]
+    }
+  ]
+}
+```
+
+| | | | | |
+-:|-:|-:|:-|:-|:-
+ | **loan_request**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о займе.
+ <td colspan="2" style="text-align:right">**term**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Срок рассрочки в месяцах.
+ <td colspan="2" style="text-align:right">**monthly_payment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Приблизительная величина ежемесячного платежа с учётом переплаты.
+ <td colspan="2" style="text-align:right">**total_of_payments**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма к погашению займа (с учётом переплат).
+ <td colspan="2" style="text-align:right">**sum_with_discount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма займа с учётом комиссии Рево.
+ <td colspan="2" style="text-align:right">**total_overpayment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма переплат ???
+ <td colspan="2" style="text-align:right">**schedule**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о графике платежей.
+ <td colspan="3" style="text-align:right">**date**<br> <font color="#939da3">string</font> | | | Дата платежа в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | | Сумма платежа в рублях с копейками.
+
+###Response Parameters
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "amount": ["не может быть пустым"],
+    "mobile_phone": ["не может быть пустым"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента ???
+
 ## PUT loan_requests/{token}
+
+```ruby
+PUT BASE_URL/loan_requests?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для обновления информации по займу, например суммы или мобильного телефона.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  "loan_request":
+  {
+    "mobile_phone": "79998887776",
+    "amount": "1399.00"
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
+  <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента из 11 цифр (с кодом страны).
+  <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | Сумма рассрочки ???
+
+###Response Parameters
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors": {
+    "phone_number": ["имеет неверный формат"],
+    "amount": ["не может быть больше 100000 рублей"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента из 11 цифр (с кодом страны).
+ <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | Сумма рассрочки ???
+
 ## GET loan_requests/{token}/client
+
+```ruby
+GET BASE_URL/loan_requests/{token}/client?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для получения информации о клиенте.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  ???
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
+  <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентефикатор торговой точки.
+
+###Response Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{
+  "client":
+  {
+    "id": 1,
+    "mobile_phone": "79998887776",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "last_name": "Иванов",
+    "birth_date": "01-01-1990",
+    "email": "user@example.com",
+    "pesel": "81010200131",
+    "area": "Москва",
+    "settlement": "Москва",
+    "street": "Новая",
+    "house": "123",
+    "building": "123",
+    "apartment": "123",
+    "postal_code": "12345",
+    "credit_limit": "33000.00",
+    "id_documents":
+    [
+      {
+        "series": "7711",
+        "number": "123456",
+        "expiry_date": "02-03-2025",
+        "issue_date": "02-03-2025",
+        "issuing_authority": "МВД России по г.Москва",
+        "issuing_authority_code": "770001"
+      }
+    ]
+  }
+}
+```
+
+| | | | | |
+-:|-:|-:|:-|:-|:-
+ | **client**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о клиенте.
+ <td colspan="2" style="text-align:right">**id**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).
+ <td colspan="2" style="text-align:right">**first_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Имя клиента.
+ <td colspan="2" style="text-align:right">**middle_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Отчество клиента.
+ <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
+ <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
+ <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Email клиента.
+ <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
+ <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+ <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
+ <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">float</font> | | | Номер паспорта клиента.
+ <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">float</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string</font> | | | Орган, выдавший паспорт.
+ <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">float</font> | | | Код подразделения, выдавшего паспорт.
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "amount": ["не может быть пустым"],
+    "mobile_phone": ["не может быть пустым"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента ???
+
 ## POST loan_requests/{token}/client
+
+```ruby
+GET BASE_URL/loan_requests/{token}/client?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для создания клиента с персональными данными.
+
+### Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{
+  "client":
+  {
+    "id": 1,
+    "mobile_phone": "79998887776",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "last_name": "Иванов",
+    "birth_date": "01-01-1990",
+    "email": "user@example.com",
+    "pesel": "81010200131",
+    "area": "Москва",
+    "settlement": "Москва",
+    "street": "Новая",
+    "house": "123",
+    "building": "123",
+    "apartment": "123",
+    "postal_code": "12345",
+    "credit_limit": "33000.00",
+    "id_documents":
+    [
+      {
+        "series": "7711",
+        "number": "123456",
+        "expiry_date": "02-03-2025",
+        "issue_date": "02-03-2025",
+        "issuing_authority": "МВД России по г.Москва",
+        "issuing_authority_code": "770001"
+      }
+    ]
+  }
+}
+```
+
+| | | | | |
+-:|-:|-:|:-|:-|:-
+ | **client**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о клиенте.
+ <td colspan="2" style="text-align:right">**id**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).
+ <td colspan="2" style="text-align:right">**first_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Имя клиента.
+ <td colspan="2" style="text-align:right">**middle_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Отчество клиента.
+ <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
+ <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
+ <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Email клиента.
+ <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
+ <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+ <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
+ <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">float</font> | | | Номер паспорта клиента.
+ <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">float</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string</font> | | | Орган, выдавший паспорт.
+ <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">float</font> | | | Код подразделения, выдавшего паспорт.
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "amount": ["не может быть пустым"],
+    "mobile_phone": ["не может быть пустым"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента ???
+
+###Response Parameters
+
+ > Пример ответа при успешной аутентификации (code 200).
+
+ ```jsonnet
+ {
+   "client":
+   {
+     "id": 1,
+     "mobile_phone": "79998887776",
+     "first_name": "Иван",
+     "middle_name": "Иванович",
+     "last_name": "Иванов",
+     "birth_date": "01-01-1990",
+     "email": "user@example.com",
+     "pesel": "81010200131",
+     "area": "Москва",
+     "settlement": "Москва",
+     "street": "Новая",
+     "house": "123",
+     "building": "123",
+     "apartment": "123",
+     "postal_code": "12345",
+     "credit_limit": "33000.00",
+     "id_documents":
+     [
+       {
+         "series": "7711",
+         "number": "123456",
+         "expiry_date": "02-03-2025",
+         "issue_date": "02-03-2025",
+         "issuing_authority": "МВД России по г.Москва",
+         "issuing_authority_code": "770001"
+       }
+     ]
+   }
+ }
+ ```
+
+ | | | | | |
+ -:|-:|-:|:-|:-|:-
+  | **client**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о клиенте.
+  <td colspan="2" style="text-align:right">**id**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.
+  <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">integer/font> | | <td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).
+  <td colspan="2" style="text-align:right">**first_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Имя клиента.
+  <td colspan="2" style="text-align:right">**middle_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Отчество клиента.
+  <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
+  <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
+  <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Email клиента.
+  <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
+  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
+  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">float</font> | | | Номер паспорта клиента.
+  <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
+  <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">float</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
+  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string</font> | | | Орган, выдавший паспорт.
+  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">float</font> | | | Код подразделения, выдавшего паспорт.
+
+ > Пример ответа при неуспешной аутентификации (code 422).
+
+ ```jsonnet
+ {
+   "errors":
+   {
+     "amount": ["не может быть пустым"],
+     "mobile_phone": ["не может быть пустым"]
+   }
+ }
+ ```
+
+ | | | |
+ -:|-:|:-|:-
+  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+  <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+  <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | Мобильный телефон клиента ???
+
+
 ## PATCH loan_requests/{token}/client
+
+```ruby
+PATCH  BASE_URL/loan_requests/{token}/client?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для загрузки фотографий клиента.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  ???
+}
+```
+
+|
+-:|:-
+ **client[documents][name]**<br> <font color="#939da3">file</font> | Фото клиента с именем.
+ **client[documents][living_addr]**<br> <font color="#939da3">file</font> | Фото паспорта со страницей регистрации.
+ **client[documents][client_with_passport]**<br> <font color="#939da3">file</font> |  Фото клиента с паспортом.
+ **client[documents][previous_passport]**<br> <font color="#939da3">file</font> | Фото предыдущего имени клиента.
+ **client[documents][issued_by]**<br> <font color="#939da3">file</font> | Фото страницы "кем выдан" паспорт.
+ **client[documents][first_two_pages]**<br> <font color="#939da3">file</font> | Фото первых двух страниц паспорта.
+
+###Response Parameters
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+   {
+    "kind": ["неверное значение типа документа"],
+    "client": ["не удалось найти клиента"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**kind**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**client**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
 ## POST loan_requests/{token}/confirmation
+
+```ruby
+POST  BASE_URL/loan_requests/{token}/confirmation?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для загрузки фотографий клиента.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  "code": "1234"
+}
+```
+
+|
+-:|:-
+ **code**<br> <font color="#939da3">int</font> | Четырёхзначный код подтверждения.
+
+###Response Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{
+  "client":
+   {
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "last_name": "Иванов",
+    "decision": "approved",
+    "credit_limit": "1255.2"
+  }
+}
+```
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "code": ["имеет неверное значение"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**kind**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**client**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
 ## POST loan_requests/{token}/client/confirmation
+
+```ruby
+POST  BASE_URL/loan_requests/{token}/confirmation?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для отправки кода подтверждения клиенту по смс.
+
+###Response Parameters
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "mobile_phone": ["не может быть пустым"],
+    "amount": ["не может быть пустым"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**kind**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**client**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
 ## POST loan_requests/{token}/loan
+
+```ruby
+POST  BASE_URL/loan_requests/{token}/loan?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для создания займа.
+
+### Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  "term": 3
+}
+```
+
+|
+-:|:-
+**term**<br> <font color="#939da3">integer</font> | Срок рассрочки в месяцах.
+
+### Response Parameters
+
+> Пример ответа при неуспешной аутентификации (code 422).
+
+```jsonnet
+{
+  "errors": {
+    "amount": ["может иметь значение меньшее или равное 3000"],
+    "base": ["К сожалению, ваша заявка отклонена"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**amount**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**base**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
+
+
 ## POST loan_requests/{token}/loan/finalization
+
+```ruby
+POST BASE_URL/loan_requests/{token}/loan/finalization?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для финализайии заявки.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  "loan":
+  {
+    "agree_processing": "1",
+    "confirmation_code": "1111"
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**loan**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе ??
+  <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">string</font> | | ???
+  <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Четырёхзначный код подтверждения.
+
+###Response Parameters
+
+> Пример ответа при неуспешном запросе (code 422).
+
+```jsonnet
+{
+  "errors":
+  {
+    "agree_processing": ["нужно подтвердить"],
+    "confirmation_code": ["имеет неверное значение"],
+    "loan_application": ["для финализации займ должен быть подтвержден"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+ <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">string</font> | | ???
+ <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Четырёхзначный код подтверждения.
+ <td colspan="2" style="text-align:right">**loan_application**<br> <font color="#939da3">string</font> | | ???
+
 ## GET loan_requests/{token}/documents/{kind}
+
+```ruby
+GET BASE_URL/loan_requests/{token}/documents/{kind}?store_id=STORE_ID1&signature=SIGNATURE
+```
+
+Метод для получения документов заявки.
+
+###Parameters
+
+> Пример запроса в формате json
+
+```jsonnet
+{
+  ???
+}
+```
+###Response Parameters
+
+> Пример ответа при неуспешном запросе (code 422).
+
+```jsonnet
+{
+???
+}
+```
+
 
 # Коды ошибок
 
