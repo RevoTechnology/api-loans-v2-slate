@@ -272,6 +272,9 @@
           <li>
             <a href="#cb76858662" class="toc-h1 toc-link" data-title="">Коды ошибок</a>
           </li>
+          <li>
+            <a href="#what-39-s-new" class="toc-h1 toc-link" data-title="what-s-new">What's new</a>
+          </li>
       </div>
     </div>
     <div class="page-wrapper">
@@ -574,7 +577,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>authentication_token</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: left">Токен.</td>
+<td style="text-align: left">Токен заявки.</td>
 </tr>
 <tr>
 <td style="text-align: right"></td>
@@ -647,7 +650,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>term</strong><br> <font color="#939da3">integer</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: right"><td colspan="2" style="text-align:left"> Срок рассрочки в месяцах.</td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Срок займа в месяцах.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
@@ -1622,29 +1625,29 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию о клиенте.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>name</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right">Имя клиента.</td>
-<td style="text-align: left"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>first_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Имя клиента.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>name</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right">Имя клиента.</td>
-<td style="text-align: left"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>middle_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Отчество клиента.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>name</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right">Имя клиента.</td>
-<td style="text-align: left"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>last_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Фамилия клиента.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>name</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right">Имя клиента.</td>
-<td style="text-align: left"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>decision</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Решение по лимиту. Возможные значения: <code>approved</code> - лимит одобрен; <code>declined</code> - лимит не одобрен.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>name</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right">Имя клиента.</td>
-<td style="text-align: left"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>credit_limit</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Величина доступного клиенту лимита в рублях с копейками.</td>
 </tr>
 <tr>
 <td style="text-align: right"></td>
@@ -1728,7 +1731,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>base</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: left">Логин пользователя ???</td>
+<td style="text-align: left">Информация по заявке.</td>
 </tr>
 </tbody></table>
 <h2 id='post-loan_requests-token-loan-finalization'>POST loan_requests/{token}/loan/finalization</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
@@ -1853,6 +1856,8 @@
 <td style="text-align: left">В запросе содержится ошибка. Описание конкретных полей, где содержатся ошибки, находятся в массиве <code>errors</code>.</td>
 </tr>
 </tbody></table>
+<h1 id='what-39-s-new'>What&#39;s new</h1>
+<p>Здесь будет размещаться информация об изменениях в API.</p>
 
       </div>
       <div class="dark-box">
