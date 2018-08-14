@@ -1,11 +1,10 @@
-
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://localhost:4567/#post-loan_requests-token-client-confirmation -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Documentation</title>
+    <title>post-loan_requests-token-client-confirmation – API Documentation</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -196,944 +195,1668 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all_nosearch.js"></script>
+    <link href="./index_files/screen.css" rel="stylesheet" media="screen">
+    <link href="./index_files/print.css" rel="stylesheet" media="print">
+      <script src="./index_files/all_nosearch.js.download"></script>
   </head>
 
   <body class="index" data-languages="[]">
-    <a href="#" id="nav-button">
+    <a href="http://localhost:4567/#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="./index_files/navbar.png" alt="Navbar">
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="./index_files/logo.png" class="logo" alt="Logo">
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+            <a href="http://localhost:4567/#3394112aa9" class="toc-h1 toc-link" data-title="">Введение</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#sessions" class="toc-h1 toc-link" data-title="sessions">/SESSIONS</a>
-              <ul class="toc-list-h2">
+            <a href="http://localhost:4567/#93900fccba" class="toc-h1 toc-link" data-title="">Авторизация</a>
+              <ul class="toc-list-h2" style="">
                   <li>
-                    <a href="#post" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                    <a href="http://localhost:4567/#url" class="toc-h2 toc-link" data-title="url">Базовые URL адреса</a>
                   </li>
                   <li>
-                    <a href="#delete" class="toc-h2 toc-link" data-title="strong-em-delete-em-strong"><strong><em>DELETE</em></strong></a>
+                    <a href="http://localhost:4567/#3b61794258" class="toc-h2 toc-link" data-title="">Параметры авторизации</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#passwords" class="toc-h1 toc-link" data-title="passwords">/PASSWORDS</a>
-              <ul class="toc-list-h2">
+            <a href="http://localhost:4567/#api" class="toc-h1 toc-link active-parent" data-title="api">Методы API</a>
+              <ul class="toc-list-h2 active" style="display: block;">
                   <li>
-                    <a href="#post-2" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
+                    <a href="http://localhost:4567/#post-sessions" class="toc-h2 toc-link" data-title="post-sessions">POST sessions</a>
                   </li>
                   <li>
-                    <a href="#put" class="toc-h2 toc-link" data-title="strong-em-put-em-strong"><strong><em>PUT</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#agent" class="toc-h1 toc-link" data-title="agent">/AGENT</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#stores-id-reports" class="toc-h1 toc-link" data-title="stores-id-reports">/STORES/{ID}/REPORTS</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-2" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#stores-id" class="toc-h1 toc-link" data-title="stores-id">/STORES/{ID}</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-3" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests" class="toc-h1 toc-link" data-title="loan_requests">/LOAN_REQUESTS</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#post-3" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token" class="toc-h1 toc-link" data-title="loan_requests-token">/LOAN_REQUESTS/{TOKEN}</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-4" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
+                    <a href="http://localhost:4567/#delete-sessions" class="toc-h2 toc-link" data-title="delete-sessions">DELETE sessions</a>
                   </li>
                   <li>
-                    <a href="#put-2" class="toc-h2 toc-link" data-title="strong-em-put-em-strong"><strong><em>PUT</em></strong></a>
+                    <a href="http://localhost:4567/#post-loan_requests" class="toc-h2 toc-link" data-title="post-loan_requests">POST loan_requests</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#get-loan_requests-token" class="toc-h2 toc-link" data-title="get-loan_requests-token">GET loan_requests/{token}</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#put-loan_requests-token" class="toc-h2 toc-link" data-title="put-loan_requests-token">PUT loan_requests/{token}</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#get-loan_requests-token-client" class="toc-h2 toc-link" data-title="get-loan_requests-token-client">GET loan_requests/{token}/client</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#post-loan_requests-token-client" class="toc-h2 toc-link" data-title="post-loan_requests-token-client">POST loan_requests/{token}/client</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#patch-loan_requests-token-client" class="toc-h2 toc-link" data-title="patch-loan_requests-token-client">PATCH loan_requests/{token}/client</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#post-loan_requests-token-confirmation" class="toc-h2 toc-link" data-title="post-loan_requests-token-confirmation">POST loan_requests/{token}/confirmation</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#post-loan_requests-token-client-confirmation" class="toc-h2 toc-link active" data-title="post-loan_requests-token-client-confirmation">POST loan_requests/{token}/client/confirmation</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#post-loan_requests-token-loan" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan">POST loan_requests/{token}/loan</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#post-loan_requests-token-loan-finalization" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan-finalization">POST loan_requests/{token}/loan/finalization</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4567/#get-loan_requests-token-documents-kind" class="toc-h2 toc-link" data-title="get-loan_requests-token-documents-kind">GET loan_requests/{token}/documents/{kind}</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#loan_requests-token-client" class="toc-h1 toc-link" data-title="loan_requests-token-client">/LOAN_REQUESTS/{TOKEN}/CLIENT</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-5" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
-                  </li>
-                  <li>
-                    <a href="#post-4" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token-confirmation" class="toc-h1 toc-link" data-title="loan_requests-token-confirmation">/LOAN_REQUESTS/{TOKEN}/CONFIRMATION</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#post-5" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token-client-confirmation" class="toc-h1 toc-link" data-title="loan_requests-token-client-confirmation">/LOAN_REQUESTS/{TOKEN}/CLIENT/CONFIRMATION</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#post-6" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token-loan" class="toc-h1 toc-link" data-title="loan_requests-token-loan">/LOAN_REQUESTS/{TOKEN}/LOAN</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#post-7" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token-loan-finalization" class="toc-h1 toc-link" data-title="loan_requests-token-loan-finalization">/LOAN_REQUESTS/{TOKEN}/LOAN/FINALIZATION</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#post-8" class="toc-h2 toc-link" data-title="strong-em-post-em-strong"><strong><em>POST</em></strong></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#loan_requests-token-documents-kind" class="toc-h1 toc-link" data-title="loan_requests-token-documents-kind">/LOAN_REQUESTS/{TOKEN}/DOCUMENTS/{KIND}</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-6" class="toc-h2 toc-link" data-title="strong-em-get-em-strong"><strong><em>GET</em></strong></a>
-                  </li>
-              </ul>
+            <a href="http://localhost:4567/#cb76858662" class="toc-h1 toc-link" data-title="">Коды ошибок</a>
           </li>
       </div>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <p>title: Revo API </p>
+        <h1 id="3394112aa9">Введение</h1>
+<p>API Loans реализовано на протоколе HTTPS на основе JSON запросов.</p>
+<h1 id="93900fccba">Авторизация</h1><h2 id="url">Базовые URL адреса</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">BASE_URL</span> <span class="o">=</span> <span class="s2">"https://r.revoplus.ru/"</span>
+<span class="nx">BASE_URL</span> <span class="o">=</span> <span class="s2">"https://demo.revoplus.ru/"</span>
+</code></pre>
+<ol>
+<li>Для взаимодействия с сервисами Рево используются 2 базовых адреса:
 
-<p>language_tabs: 
-   - shell </p>
+<ul>
+<li>https://r.revoplus.ru/ - адрес <code>production</code> сервиса.</li>
+<li>https://demo.revoup.ru/ - адрес <code>demo</code> сервиса.</li>
+</ul></li>
+<li><code>BASE_URL</code> - переменная обозначающая базовый адрес.</li>
+</ol>
 
-<p>toc_footers: 
-   - <a href='#'>Sign Up for a Developer Key</a> 
-   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> </p>
+<aside class="notice">
+Подключение должно производиться только по протоколу HTTPS  - при попытке подключения по HTTP будет возникать 404 ошибка.
+</aside>
+<h2 id="3b61794258">Параметры авторизации</h2>
+<p>Для авторизации обращения к методам API используется <code>authentication_token</code>, который генерируется путём создания сессии с помощью метода <a href="http://localhost:4567/#post-sessions">sessions</a>.
+<code>login</code> и <code>password</code> необходимые для этого метода создаются на стороне Рево.</p>
+<h1 id="api">Методы API</h1><h2 id="post-sessions">POST sessions</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
+</code></pre>
+<p>Метод для создания сессии пользователя (консультанта). Возвращает <code>authentication_token</code>, который необходим для авторизации обращения к другим методам API.</p>
+<h3 id="parameters">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"user"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"login"</span><span class="p">:</span> <span class="s">"qwerty"</span><span class="p">,</span>
+    <span class="s">"password"</span><span class="p">:</span> <span class="s">"123456"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>user</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об авторизуемом пользователе (консультанте).</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>login</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Логин пользователя.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>password</strong><br> <font color="#939da3">sring</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Пароль пользователя.</td>
+</tr>
+</tbody></table>
+<h3 id="response-parameters">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"user"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"authentication_token"</span><span class="p">:</span> <span class="s">"api_key_123456"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"login"</span><span class="p">:</span> <span class="p">[</span><span class="s">"неверный логин или пароль"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>authentication_token</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"></td><td colspan="2"> Токен для последующего обращения к методам API.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
+</tr>
+</tbody></table>
+<h2 id="delete-sessions">DELETE sessions</h2><pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
+</code></pre>
+<p>Метод для закрытия сессии пользователя (консультанта).</p>
+<h3 id="response-parameters-2">Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>Code 200</strong></td>
+<td style="text-align: left"></td><td colspan="2"> Операция успешна.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>Code 401</strong></td>
+<td style="text-align: left"></td><td colspan="2"> Сессия не обнаружена.</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody></table>
 
-<!-- includes: 
-   - errors 
+<!-- ##POST passwords
+
+ ```ruby
+ POST BASE_URL/passwords
+ ```
+
+ Метод для отправки кодя подтверждения пользователю (консультанту).
+
+###Parameters
+ > Пример запроса в формате json
+
+ ```jsonnet
+ {
+   "user":
+   {
+     "login": "qwerty"
+   }
+ }
+ ```
+
+ | | | |
+ -:|-:|:-|:-
+  |**user**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об авторизуемом пользователе (консультанте).
+   <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя.
+
+###Response Parameters
+
+   > Пример ответа при неуспешной аутентификации (code 422).
+
+   ```jsonnet
+   {
+     "errors":
+     {
+       "login": ["логин не найден"]
+     }
+   }
+   ```
+
+   | | | |
+   -:|-:|:-|:-
+    |**authentication_token**<br> <font color="#939da3">string</font> | <td colspan="2"> Токен для последующего обращения к методам API.
+    |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
+    <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+
+## PUT passwords
+
+  ```ruby
+  PUT BASE_URL/passwords
+  ```
+  Метод для проверки кода подтверждения, установки нового ПИН-а и получения `api_key`.
+
+### Parameters
+
+  > Пример запроса в формате json
+
+  ```jsonnet
+  {
+    "user":
+    {
+      "login": "string",
+      "confirmation_code": "string",
+      "password": "string",
+      "password_confirmation": "string"
+    }
+  }
+  ```
+
+  | | | |
+  -:|-:|:-|:-
+   |**user**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об авторизуемом пользователе (консультанте).
+    <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя.
+    <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
+    <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
+    <td colspan="2" style="text-align:right">**password_confirmation**<br> <font color="#939da3">string</font> | | Пароль подтверждения.
+
+###Response Parameters
+
+  > Пример ответа при успешной аутентификации (code 200).
+
+  ```jsonnet
+  {
+    "user":
+    {
+      "authentication_token": "string"
+    }
+  }
+  ```
+
+  > Пример ответа при неуспешной аутентификации (code 422).
+
+  ```jsonnet
+  {
+    "errors":
+    {
+      "confirmation_code": ["неверный"],
+      "password": ["должен быть равен 4 символам"]
+    }
+  }
+  ```
+
+  | | | |
+  -:|-:|:-|:-
+  <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
+  <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
  -->
-
-<p>search: true </p>
-<h1 id='introduction'>Introduction</h1>
-<p>Revo API for merchant APP. </p>
-
-<p><strong>Version:</strong> 2.0.0.beta </p>
-<h1 id='authentication'>Authentication</h1>
+<h2 id="post-loan_requests">POST loan_requests</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span>
+</code></pre>
+<p>Метод для создания завки на займ. Возвращает <code>{token}</code> заявки.</p>
+<h3 id="parameters-2">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"loan_request"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"store_id"</span><span class="p">:</span> <span class="s">"1234"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>apiKey</th>
-<th><em>API Key</em></th>
-</tr>
-</thead><tbody>
-</tbody></table>
-<h1 id='sessions'>/SESSIONS</h1><h2 id='post'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Creates agent session.</p>
-
-<p><strong>Description:</strong> Returns token for next requests.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>***POST*** /sessions</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>user</td>
-<td>body</td>
-<td>User credentials for auth</td>
-<td>No</td>
-<td></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>loan_request</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию о займе.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>store_id</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Идентификатор торговой точки. Создается на стороне Рево.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h3 id="response-parameters-3">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"loan_request"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"token"</span><span class="p">:</span> <span class="s">"b4e9d33f6021ad31a1b494ffb7be29069d580dfc"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"store_id"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не найден"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>OK</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>loan_request</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию о займе.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Invalid credetials</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>authentication_token</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Токен.</td>
 </tr>
 <tr>
-<td>422</td>
-<td>Unprocessible entity</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='delete'><strong><em>DELETE</em></strong></h2>
-<p><strong>Summary:</strong> Destroy agent session</p>
+<h2 id="get-loan_requests-token">GET loan_requests/{token}</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}?</span><span class="n">amount</span><span class="o">=</span><span class="no">AMOUNT</span>
+</code></pre>
+<p>Метод для получения доступных графиков платежей для заявки. Для расчёта графика платежей для суммы покупок <code>AMOUNT</code> используется переменная <code>amount</code>. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="http://localhost:4567/#put-loan_requests-token">loan_request</a>).</p>
 
-<p><strong>Description:</strong> Remove current agent token</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>***DELETE*** /sessions</code> </p>
-
-<p><strong>Responses</strong></p>
-
+<p>Если в заявке не указан номер телефона, то расчёт графика платежей производится как для нового клиента.</p>
+<h3 id="response-parameters-4">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"loan_request"</span><span class="p">:</span>
+  <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s">"term_id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s">"term"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s">"monthly_payment"</span><span class="p">:</span> <span class="mi">2945</span><span class="p">,</span>
+      <span class="s">"total_of_payments"</span><span class="p">:</span> <span class="mi">8833</span><span class="p">,</span>
+      <span class="s">"sum_with_discount"</span><span class="p">:</span> <span class="mi">6399</span><span class="p">,</span>
+      <span class="s">"total_overpayment"</span><span class="p">:</span> <span class="mi">2434</span><span class="p">,</span>
+      <span class="s">"sms_info"</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+      <span class="s">"schedule"</span><span class="p">:</span>
+      <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s">"date"</span><span class="p">:</span> <span class="s">"10-09-2018"</span><span class="p">,</span>
+          <span class="s">"amount"</span><span class="p">:</span> <span class="mi">2945</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="s">"date"</span><span class="p">:</span> <span class="s">"09-10-2018"</span><span class="p">,</span>
+          <span class="s">"amount"</span><span class="p">:</span> <span class="mi">2945</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="s">"date"</span><span class="p">:</span> <span class="s">"09-11-2018"</span><span class="p">,</span>
+          <span class="s">"amount"</span><span class="p">:</span> <span class="mi">2943</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>loan_request</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td><td colspan="3"> Объект, содержащий информацию о расчёте доступных продуктов.</td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>term_id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер продукта.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>term</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Срок займа в месяцах.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>monthly_payment</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Величина ежемесячного платежа с учётом переплаты.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>total_of_payments</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Общая сумма к погашению займа (с учётом переплат).</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>sum_with_discount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>total_overpayment</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Общая сумма переплаты за весь период займа.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>sms_info</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Стоимость услуги смс-информирования.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>schedule</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Объект, содержащий информацию о графике платежей.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата платежа в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Величина платежа клиента в месяц в рублях с копейками. Последний платёж может отличаться от предыдущих.</td>
+<td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h1 id='passwords'>/PASSWORDS</h1><h2 id='post-2'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Send confirmation code</p>
-
-<p><strong>Description:</strong> Send confirmation code to agent phone</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>***POST*** /passwords</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h3 id="response-parameters-5">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code><span class="p">{</span>
+  <span class="s2">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s2">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"не может быть пустым"</span><span class="p">],</span>
+    <span class="s2">"mobile_phone"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"не может быть пустым"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>user</td>
-<td>body</td>
-<td>User with mobile phone</td>
-<td>Yes</td>
-<td></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h2 id="put-loan_requests-token">PUT loan_requests/{token}</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span>
+</code></pre>
+<p>Метод для обновления информации по займу, например суммы или мобильного телефона.</p>
+<h3 id="parameters-3">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"loan_request"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="s">"79998887776"</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="mf">1399.00</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>loan_request</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию о заявке.</td>
 </tr>
 <tr>
-<td>422</td>
-<td>Unprocessible entity</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Мобильный телефон клиента из 11 цифр (с кодом страны).</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).</td>
 </tr>
 </tbody></table>
-<h2 id='put'><strong><em>PUT</em></strong></h2>
-<p><strong>Summary:</strong> Set new agent pin</p>
-
-<p><strong>Description:</strong> Check confirmation code, set new pin and return api_key</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>***PUT*** /passwords</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h3 id="response-parameters-6">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"phone_number"</span><span class="p">:</span> <span class="p">[</span><span class="s">"имеет неверный формат"</span><span class="p">],</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть больше 100000 рублей"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>user</td>
-<td>body</td>
-<td>User login, confirmation_code, new pin and pin confirmation</td>
-<td>Yes</td>
-<td></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h2 id="get-loan_requests-token-client">GET loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+</code></pre>
+<p>Метод для получения информации о клиенте. С помощью данного метода можно отличать повторных клиентов от новых: если в ответе с кодом 200 пришел пустой json <code>{}</code>, то клиент является новым; во всех остальных случаях - повторным.</p>
+<h3 id="response-parameters-7">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"client"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="s">"79998887776"</span><span class="p">,</span>
+    <span class="s">"first_name"</span><span class="p">:</span> <span class="s">"Иван"</span><span class="p">,</span>
+    <span class="s">"middle_name"</span><span class="p">:</span> <span class="s">"Иванович"</span><span class="p">,</span>
+    <span class="s">"last_name"</span><span class="p">:</span> <span class="s">"Иванов"</span><span class="p">,</span>
+    <span class="s">"birth_date"</span><span class="p">:</span> <span class="s">"01-01-1990"</span><span class="p">,</span>
+    <span class="s">"email"</span><span class="p">:</span> <span class="s">"user@example.com"</span><span class="p">,</span>
+    <span class="s">"area"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+    <span class="s">"settlement"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+    <span class="s">"street"</span><span class="p">:</span> <span class="s">"Новая"</span><span class="p">,</span>
+    <span class="s">"house"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"building"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"apartment"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"postal_code"</span><span class="p">:</span> <span class="s">"12345"</span><span class="p">,</span>
+    <span class="s">"credit_limit"</span><span class="p">:</span> <span class="mf">33000.00</span><span class="p">,</span>
+    <span class="s">"id_documents"</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s">"series"</span><span class="p">:</span> <span class="s">"7711"</span><span class="p">,</span>
+        <span class="s">"number"</span><span class="p">:</span> <span class="s">"123456"</span><span class="p">,</span>
+        <span class="s">"expiry_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+        <span class="s">"issue_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+        <span class="s">"issuing_authority"</span><span class="p">:</span> <span class="s">"МВД России по г.Москва"</span><span class="p">,</span>
+        <span class="s">"issuing_authority_code"</span><span class="p">:</span> <span class="s">"770001"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>client</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td><td colspan="3"> Объект, содержащий информацию о клиенте.</td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td>422</td>
-<td>Unprocessible entity</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>first_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Имя клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>middle_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Отчество клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>last_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Фамилия клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>birth_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Дата рождения клиента в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>email</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Email клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>credit_limit</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id_documents</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>series</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Серия паспорта клиента.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>number</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Номер паспорта клиента.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>expiry_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата окончания действия паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата выдачи паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Орган, выдавший паспорт.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Код подразделения, выдавшего паспорт.</td>
+<td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h1 id='agent'>/AGENT</h1><h2 id='get'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Get agent info</p>
 
-<p><strong>Description:</strong> Returns basic agent information</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>***GET*** /agent</code> </p>
-
-<p><strong>Responses</strong></p>
-
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">],</span>
+    <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h1 id='stores-id-reports'>/STORES/{ID}/REPORTS</h1><h2 id='get-2'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Get agent reports</p>
-
-<p><strong>Description:</strong> Returns agent sales report by period for store</p>
-<h3 id='http-request-6'>HTTP Request</h3>
-<p><code>***GET*** /stores/{id}/reports</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h2 id="post-loan_requests-token-client">POST loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+</code></pre>
+<p>Метод для создания клиента с персональными данными.</p>
+<h3 id="parameters-4">Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"client"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="s">"79998887776"</span><span class="p">,</span>
+    <span class="s">"first_name"</span><span class="p">:</span> <span class="s">"Иван"</span><span class="p">,</span>
+    <span class="s">"middle_name"</span><span class="p">:</span> <span class="s">"Иванович"</span><span class="p">,</span>
+    <span class="s">"last_name"</span><span class="p">:</span> <span class="s">"Иванов"</span><span class="p">,</span>
+    <span class="s">"birth_date"</span><span class="p">:</span> <span class="s">"01-01-1990"</span><span class="p">,</span>
+    <span class="s">"email"</span><span class="p">:</span> <span class="s">"user@example.com"</span><span class="p">,</span>
+    <span class="s">"pesel"</span><span class="p">:</span> <span class="s">"81010200131"</span><span class="p">,</span>
+    <span class="s">"area"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+    <span class="s">"settlement"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+    <span class="s">"street"</span><span class="p">:</span> <span class="s">"Новая"</span><span class="p">,</span>
+    <span class="s">"house"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"building"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"apartment"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+    <span class="s">"postal_code"</span><span class="p">:</span> <span class="s">"12345"</span><span class="p">,</span>
+    <span class="s">"id_documents"</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s">"series"</span><span class="p">:</span> <span class="s">"7711"</span><span class="p">,</span>
+        <span class="s">"number"</span><span class="p">:</span> <span class="s">"123456"</span><span class="p">,</span>
+        <span class="s">"expiry_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+        <span class="s">"issue_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+        <span class="s">"issuing_authority"</span><span class="p">:</span> <span class="s">"МВД России по г.Москва"</span><span class="p">,</span>
+        <span class="s">"issuing_authority_code"</span><span class="p">:</span> <span class="s">"770001"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
-<td>path</td>
-<td>Agent store ID</td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>client</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td><td colspan="3"> Объект, содержащий информацию о клиенте.</td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td>from</td>
-<td>query</td>
-<td></td>
-<td>Yes</td>
-<td>string (%d-%m-%Y)</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td>to</td>
-<td>query</td>
-<td></td>
-<td>Yes</td>
-<td>string (%d-%m-%Y)</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>first_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Имя клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>middle_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Отчество клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>last_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Фамилия клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>birth_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Дата рождения клиента в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>email</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Email клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id_documents</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>series</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Серия паспорта клиента.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>number</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Номер паспорта клиента.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>expiry_date</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата окончания действия паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата выдачи паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Орган, выдавший паспорт.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Код подразделения, выдавшего паспорт.</td>
+<td style="text-align: left"></td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h3 id="response-parameters-8">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code> <span class="p">{</span>
+   <span class="s">"client"</span><span class="p">:</span>
+   <span class="p">{</span>
+     <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+     <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="s">"79998887776"</span><span class="p">,</span>
+     <span class="s">"first_name"</span><span class="p">:</span> <span class="s">"Иван"</span><span class="p">,</span>
+     <span class="s">"middle_name"</span><span class="p">:</span> <span class="s">"Иванович"</span><span class="p">,</span>
+     <span class="s">"last_name"</span><span class="p">:</span> <span class="s">"Иванов"</span><span class="p">,</span>
+     <span class="s">"birth_date"</span><span class="p">:</span> <span class="s">"01-01-1990"</span><span class="p">,</span>
+     <span class="s">"email"</span><span class="p">:</span> <span class="s">"user@example.com"</span><span class="p">,</span>
+     <span class="s">"pesel"</span><span class="p">:</span> <span class="s">"81010200131"</span><span class="p">,</span>
+     <span class="s">"area"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+     <span class="s">"settlement"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
+     <span class="s">"street"</span><span class="p">:</span> <span class="s">"Новая"</span><span class="p">,</span>
+     <span class="s">"house"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+     <span class="s">"building"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+     <span class="s">"apartment"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
+     <span class="s">"postal_code"</span><span class="p">:</span> <span class="s">"12345"</span><span class="p">,</span>
+     <span class="s">"credit_limit"</span><span class="p">:</span> <span class="s">"33000.00"</span><span class="p">,</span>
+     <span class="s">"id_documents"</span><span class="p">:</span>
+     <span class="p">[</span>
+       <span class="p">{</span>
+         <span class="s">"series"</span><span class="p">:</span> <span class="s">"7711"</span><span class="p">,</span>
+         <span class="s">"number"</span><span class="p">:</span> <span class="s">"123456"</span><span class="p">,</span>
+         <span class="s">"expiry_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+         <span class="s">"issue_date"</span><span class="p">:</span> <span class="s">"02-03-2025"</span><span class="p">,</span>
+         <span class="s">"issuing_authority"</span><span class="p">:</span> <span class="s">"МВД России по г.Москва"</span><span class="p">,</span>
+         <span class="s">"issuing_authority_code"</span><span class="p">:</span> <span class="s">"770001"</span>
+       <span class="p">}</span>
+     <span class="p">]</span>
+   <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code> <span class="p">{</span>
+   <span class="s">"errors"</span><span class="p">:</span>
+   <span class="p">{</span>
+     <span class="s">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">],</span>
+     <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">]</span>
+   <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>client</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td><td colspan="3"> Объект, содержащий информацию о клиенте.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>first_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Имя клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>middle_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Отчество клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>last_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Фамилия клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>birth_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Дата рождения клиента в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>email</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Email клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>credit_limit</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>id_documents</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>series</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Серия паспорта клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>number</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Номер паспорта клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>expiry_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата окончания действия паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Дата выдачи паспорта в формате <code>dd-mm-yyyy</code>.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Орган, выдавший паспорт.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Код подразделения, выдавшего паспорт.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td><td colspan="3"> Объект, содержащий информацию об ошибках.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h1 id='stores-id'>/STORES/{ID}</h1><h2 id='get-3'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Get store information</p>
-
-<p><strong>Description:</strong> Returns store information</p>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>***GET*** /stores/{id}</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h2 id="patch-loan_requests-token-client">PATCH loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">PATCH</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+</code></pre>
+<p>Метод для загрузки фотографий клиента. Используется multipart/form-data.</p>
+<h3 id="parameters-5">Parameters</h3>
+<blockquote>
+<p>Пример запроса</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"client"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"documents"</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="s">"kind"</span><span class="p">:</span> <span class="nx">File</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s">"name.jpg"</span><span class="p">)</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
-<td>path</td>
-<td>Agent store ID</td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"><strong>[name]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото первого разворота паспорта.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[living_addr]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото паспорта со страницей регистрации.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[client_with_passport]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото клиента с паспортом.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[previous_passport]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото предыдущего имени клиента.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[issued_by]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото страницы "кем выдан" паспорт.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[first_two_pages]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Фото первых двух страниц паспорта.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h3 id="response-parameters-9">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+   <span class="p">{</span>
+    <span class="s">"kind"</span><span class="p">:</span> <span class="p">[</span><span class="s">"неверное значение типа документа"</span><span class="p">],</span>
+    <span class="s">"client"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не удалось найти клиента"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>kind</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Тип загружаемого документа.</td>
 </tr>
 </tbody></table>
-<h1 id='loan_requests'>/LOAN_REQUESTS</h1><h2 id='post-3'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Create loan request</p>
-
-<p><strong>Description:</strong> Create loan request record and return token</p>
-<h3 id='http-request-8'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h2 id="post-loan_requests-token-confirmation">POST loan_requests/{token}/confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
+</code></pre>
+<p>Метод для подтверждения согласия с передачей персональных данных и верификации номера телефона клиента с помощью смс кода. Используется для существующих клиентов. Для новых клиентов код передаётся при создании клиента с помощью метода <a href="http://localhost:4567/#post-loan_requests-token-client">loan_requests/{token}/client</a>.</p>
+<h3 id="parameters-6">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"code"</span><span class="p">:</span> <span class="s">"1234"</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>loan_request</td>
-<td>body</td>
-<td></td>
-<td>Yes</td>
-<td></td>
+<td style="text-align: right"><strong>code</strong><br> <font color="#939da3">int</font></td>
+<td style="text-align: left">Четырёхзначный код подтверждения.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h3 id="response-parameters-10">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"client"</span><span class="p">:</span>
+   <span class="p">{</span>
+    <span class="s">"first_name"</span><span class="p">:</span> <span class="s">"Иван"</span><span class="p">,</span>
+    <span class="s">"middle_name"</span><span class="p">:</span> <span class="s">"Иванович"</span><span class="p">,</span>
+    <span class="s">"last_name"</span><span class="p">:</span> <span class="s">"Иванов"</span><span class="p">,</span>
+    <span class="s">"decision"</span><span class="p">:</span> <span class="s">"approved"</span><span class="p">,</span>
+    <span class="s">"credit_limit"</span><span class="p">:</span> <span class="mf">1255.2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"code"</span><span class="p">:</span> <span class="p">[</span><span class="s">"имеет неверное значение"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>client</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию о клиенте.</td>
 </tr>
 <tr>
-<td>400</td>
-<td>bad request</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>first_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Имя клиента.</td>
 </tr>
 <tr>
-<td>422</td>
-<td>Unprocessible entity</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>middle_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Отчество клиента.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>last_name</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Фамилия клиента.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>decision</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Решение по лимиту. Возможные значения: <code>approved</code> - лимит одобрен; <code>declined</code> - лимит не одобрен.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>credit_limit</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Величина доступного клиенту лимита в рублях с копейками.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h1 id='loan_requests-token'>/LOAN_REQUESTS/{TOKEN}</h1><h2 id='get-4'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Get tariff information</p>
-
-<p><strong>Description:</strong> Get information about tariff and terms</p>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>***GET*** /loan_requests/{token}</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h2 id="post-loan_requests-token-client-confirmation">POST loan_requests/{token}/client/confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
+</code></pre>
+<p>Метод для отправки кода подтверждения клиенту по смс. Также используется для повторной отправки смс кода. Смс код используется как для верификации номера телефона (и согласия клиента с передачей персональных данных), так и для подтверждения займа при финализации.</p>
+<h3 id="response-parameters-11">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">],</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>path</td>
-<td>Loan request unique token</td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h2 id="post-loan_requests-token-loan">POST loan_requests/{token}/loan</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span>
+</code></pre>
+<p>Метод для создания займа.</p>
+<h3 id="parameters-7">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"term_id"</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>422</td>
-<td>unproccesable entity</td>
+<td style="text-align: right"><strong>term_id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: left">Номер продукта.</td>
 </tr>
 </tbody></table>
-<h2 id='put-2'><strong><em>PUT</em></strong></h2>
-<p><strong>Summary:</strong> Update loan_request</p>
-
-<p><strong>Description:</strong> Update phone or sum for loan_request</p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>***PUT*** /loan_requests/{token}</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h3 id="response-parameters-12">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешной аутентификации (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="p">[</span><span class="s">"может иметь значение меньшее или равное 3000"</span><span class="p">],</span>
+    <span class="s">"base"</span><span class="p">:</span> <span class="p">[</span><span class="s">"К сожалению, ваша заявка отклонена"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>path</td>
-<td>Loan request unique token</td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 <tr>
-<td>loan_request</td>
-<td>body</td>
-<td>Loan request parameters</td>
-<td>No</td>
-<td></td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>base</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Информация по заявке.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
+<h2 id="post-loan_requests-token-loan-finalization">POST loan_requests/{token}/loan/finalization</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
+</code></pre>
+<p>Метод для финализации заявки. В качестве смс кода может использоваться тот же код, что и для верификации номера телефона (и согласия клиента с передачей персональных данных).</p>
+<h3 id="parameters-8">Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"loan"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"agree_sms_info"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s">"agree_processing"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="s">"1111"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>loan</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию о займе.</td>
 </tr>
 <tr>
-<td>422</td>
-<td>unprocessable entity</td>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>agree_sms_info</strong><br> <font color="#939da3">boolean</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Согласие клиента с подключением платного смс-информирования.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>agree_processing</strong><br> <font color="#939da3">boolean</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Согласие клиента с оформлением договора.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>confirmation_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Четырёхзначный код подтверждения.</td>
 </tr>
 </tbody></table>
-<h1 id='loan_requests-token-client'>/LOAN_REQUESTS/{TOKEN}/CLIENT</h1><h2 id='get-5'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Client information</p>
-
-<p><strong>Description:</strong> Check client for loan_request</p>
-<h3 id='http-request-11'>HTTP Request</h3>
-<p><code>***GET*** /loan_requests/{token}/client</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h3 id="response-parameters-13">Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при неуспешном запросе (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"agree_processing"</span><span class="p">:</span> <span class="p">[</span><span class="s">"нужно подтвердить"</span><span class="p">],</span>
+    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="p">[</span><span class="s">"имеет неверное значение"</span><span class="p">],</span>
+    <span class="s">"loan_application"</span><span class="p">:</span> <span class="p">[</span><span class="s">"для финализации займ должен быть подтвержден"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>path</td>
-<td>Unique loan_request token</td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"></td><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td><td colspan="2" style="text-align:right"><strong>loan_application</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left"></td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
+<h2 id="get-loan_requests-token-documents-kind">GET loan_requests/{token}/documents/{kind}</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="p">{</span><span class="n">kind</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">pdf</span><span class="o">|</span><span class="n">html</span><span class="p">}</span>
+</code></pre>
+<p>Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html.</p>
 
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Description</th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>200</td>
-<td>successful operation</td>
+<td style="text-align: right"><strong>[asp]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Согласие использование аналога собственноручной подписи (АСП), т.е. согласие использовать смс код вместо ручной подписи.</td>
 </tr>
 <tr>
-<td>422</td>
-<td>unprocessable entity</td>
+<td style="text-align: right"><strong>[offer]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Договор оферты.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[agreement]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Согласие на обработку персональных данных.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>[third_parties]</strong><br> <font color="#939da3">file</font></td>
+<td style="text-align: left">Согласие на взаимодействие с третьими лицами, направленное на возврат просроченной задолженности.</td>
 </tr>
 </tbody></table>
-<h2 id='post-4'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Create client</p>
-
-<p><strong>Description:</strong> Create client for loan_request</p>
-<h3 id='http-request-12'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests/{token}/client</code> </p>
-
-<p><strong>Parameters</strong></p>
-
+<h1 id="cb76858662">Коды ошибок</h1>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
+<th style="text-align: right">Код</th>
+<th style="text-align: left">Комментарии</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
+<td style="text-align: right"><strong>200</strong></td>
+<td style="text-align: left">Всё ок.</td>
 </tr>
 <tr>
-<td>client</td>
-<td>body</td>
-<td>Client form parameters</td>
-<td>Yes</td>
-<td></td>
+<td style="text-align: right"><strong>400</strong></td>
+<td style="text-align: left">Некорректный формат json запроса.</td>
+</tr>
+<tr>
+<td style="text-align: right"><strong>422</strong></td>
+<td style="text-align: left">В запросе содержится ошибка. Описание конкретных полей, где содержатся ошибки, находятся в массиве <code>errors</code>.</td>
 </tr>
 </tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>422</td>
-<td>unprocessable entity</td>
-</tr>
-</tbody></table>
-<h1 id='loan_requests-token-confirmation'>/LOAN_REQUESTS/{TOKEN}/CONFIRMATION</h1><h2 id='post-5'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Confirm client</p>
-
-<p><strong>Description:</strong> Confirm client by code</p>
-<h3 id='http-request-13'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests/{token}/confirmation</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-<tr>
-<td></td>
-<td>body</td>
-<td></td>
-<td>Yes</td>
-<td></td>
-</tr>
-</tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>422</td>
-<td>unprocessable entity</td>
-</tr>
-</tbody></table>
-<h1 id='loan_requests-token-client-confirmation'>/LOAN_REQUESTS/{TOKEN}/CLIENT/CONFIRMATION</h1><h2 id='post-6'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Send confirmation code</p>
-
-<p><strong>Description:</strong> Send confirmation code to client</p>
-<h3 id='http-request-14'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests/{token}/client/confirmation</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>path</td>
-<td>Unique loan_request token</td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-</tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>422</td>
-<td>unprocessable entity</td>
-</tr>
-</tbody></table>
-<h1 id='loan_requests-token-loan'>/LOAN_REQUESTS/{TOKEN}/LOAN</h1><h2 id='post-7'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Create approved loan</p>
-
-<p><strong>Description:</strong> Create LoanApplication with <code>approved</code> status</p>
-<h3 id='http-request-15'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests/{token}/loan</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-<tr>
-<td></td>
-<td>body</td>
-<td></td>
-<td>Yes</td>
-<td></td>
-</tr>
-</tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-</tbody></table>
-<h1 id='loan_requests-token-loan-finalization'>/LOAN_REQUESTS/{TOKEN}/LOAN/FINALIZATION</h1><h2 id='post-8'><strong><em>POST</em></strong></h2>
-<p><strong>Summary:</strong> Finalize loan</p>
-
-<p><strong>Description:</strong> Finalize LoanApplication</p>
-<h3 id='http-request-16'>HTTP Request</h3>
-<p><code>***POST*** /loan_requests/{token}/loan/finalization</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-<tr>
-<td>loan</td>
-<td>body</td>
-<td>Loan form parameters</td>
-<td>Yes</td>
-<td></td>
-</tr>
-</tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-<tr>
-<td>422</td>
-<td>unprocessable entity</td>
-</tr>
-</tbody></table>
-<h1 id='loan_requests-token-documents-kind'>/LOAN_REQUESTS/{TOKEN}/DOCUMENTS/{KIND}</h1><h2 id='get-6'><strong><em>GET</em></strong></h2>
-<p><strong>Summary:</strong> Get documents</p>
-
-<p><strong>Description:</strong> Load loan documents by kind</p>
-<h3 id='http-request-17'>HTTP Request</h3>
-<p><code>***GET*** /loan_requests/{token}/documents/{kind}</code> </p>
-
-<p><strong>Parameters</strong></p>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Located in</th>
-<th>Description</th>
-<th>Required</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-<tr>
-<td>kind</td>
-<td>path</td>
-<td></td>
-<td>Yes</td>
-<td>string</td>
-</tr>
-</tbody></table>
-
-<p><strong>Responses</strong></p>
-
-<table><thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>successful operation</td>
-</tr>
-</tbody></table>
-
-<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
 
       </div>
       <div class="dark-box">
       </div>
     </div>
-  </body>
-</html>
+  
+
+</body></html>
