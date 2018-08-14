@@ -327,7 +327,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
 -:|-:|-:|:-|:-|:-
  | **loan_request**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о расчёте доступных продуктов.
  <td colspan="2" style="text-align:right">**term_id**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Номер продукта.
- <td colspan="2" style="text-align:right">**term**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Срок рассрочки в месяцах.
+ <td colspan="2" style="text-align:right">**term**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Срок займа в месяцах.
  <td colspan="2" style="text-align:right">**monthly_payment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Величина ежемесячного платежа с учётом переплаты.
  <td colspan="2" style="text-align:right">**total_of_payments**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма к погашению займа (с учётом переплат).
  <td colspan="2" style="text-align:right">**sum_with_discount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).
@@ -742,11 +742,11 @@ POST  BASE_URL/api/loans/v1/loan_requests/{token}/confirmation
 | | | |
 -:|-:|:-|:-
  | **client**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о клиенте.
- <td colspan="2" style="text-align:right">**name**<br> <font color="#939da3">integer</font> | Имя клиента.
- <td colspan="2" style="text-align:right">**name**<br> <font color="#939da3">integer</font> | Имя клиента.
- <td colspan="2" style="text-align:right">**name**<br> <font color="#939da3">integer</font> | Имя клиента.
- <td colspan="2" style="text-align:right">**name**<br> <font color="#939da3">integer</font> | Имя клиента.
- <td colspan="2" style="text-align:right">**name**<br> <font color="#939da3">integer</font> | Имя клиента.
+ <td colspan="2" style="text-align:right">**first_name**<br> <font color="#939da3">integer</font> | | Имя клиента.
+ <td colspan="2" style="text-align:right">**middle_name**<br> <font color="#939da3">integer</font> | | Отчество клиента.
+ <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">integer</font> | | Фамилия клиента.
+ <td colspan="2" style="text-align:right">**decision**<br> <font color="#939da3">integer</font> | | Решение по лимиту. Возможные значения: `approved` - лимит одобрен; `declined` - лимит не одобрен.
+ <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">integer</font> | | Величина доступного клиенту лимита в рублях с копейками.
   |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
 
 ## POST loan_requests/{token}/client/confirmation
@@ -813,7 +813,7 @@ POST  BASE_URL/api/loans/v1/loan_requests/{token}/loan
 | | | |
 -:|-:|:-|:-
   |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
- <td colspan="2" style="text-align:right">**base**<br> <font color="#939da3">string</font> | | Логин пользователя ???
+ <td colspan="2" style="text-align:right">**base**<br> <font color="#939da3">string</font> | | Информация по заявке.
 
 
 
