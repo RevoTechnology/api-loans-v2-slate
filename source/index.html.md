@@ -221,6 +221,7 @@ POST BASE_URL/api/loans/v1/sessions
   <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
   <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
  -->
+
 ## POST loan_requests
 
 ```ruby
@@ -274,7 +275,7 @@ POST BASE_URL/api/loans/v1/loan_requests
 | | | |
 -:|-:|:-|:-
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
- <td colspan="2" style="text-align:right">**authentication_token**<br> <font color="#939da3">string</font> | | Токен.
+ <td colspan="2" style="text-align:right">**authentication_token**<br> <font color="#939da3">string</font> | | Токен заявки.
  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
 
 ## GET loan_requests/{token}
@@ -889,3 +890,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/documents/{kind}.{pdf|html}
 **200** | Всё ок.
 **400** | Некорректный формат json запроса.
 **422** | В запросе содержится ошибка. Описание конкретных полей, где содержатся ошибки, находятся в массиве `errors`.
+
+# What's new
+
+Здесь будет размещаться информация об изменениях в API.
