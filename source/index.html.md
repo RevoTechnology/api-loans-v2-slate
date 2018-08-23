@@ -275,7 +275,7 @@ POST BASE_URL/api/loans/v1/loan_requests
 | | | |
 -:|-:|:-|:-
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
- <td colspan="2" style="text-align:right">**authentication_token**<br> <font color="#939da3">string</font> | | Токен заявки.
+ <td colspan="2" style="text-align:right">**token**<br> <font color="#939da3">string</font> | | Токен заявки.
  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
 
 ## GET loan_requests/{token}
