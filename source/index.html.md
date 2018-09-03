@@ -238,7 +238,8 @@ POST BASE_URL/api/loans/v1/loan_requests
 {
   "loan_request":
   {
-    "store_id": "1234"
+    "store_id": "1234",
+    "order_id": "R2424"
   }
 }
 ```
@@ -247,6 +248,7 @@ POST BASE_URL/api/loans/v1/loan_requests
 -:|-:|:-|:-
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
+  <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Идентификатор заявки по системе Рево.
 
 ###Response Parameters
 
@@ -303,7 +305,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
       "total_of_payments": 8833,
       "sum_with_discount": 6399,
       "total_overpayment": 2434,
-      "sms_info": 59,
+      "sms_info": 59.0,
       "schedule":
       [
         {
@@ -432,6 +434,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
     "apartment": "123",
     "postal_code": "12345",
     "credit_limit": 33000.00,
+    "missing_documents": ["name"],
     "id_documents":
     [
       {
@@ -465,6 +468,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
+ <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
@@ -790,13 +794,15 @@ POST  BASE_URL/api/loans/v1/loan_requests/{token}/loan
 
 ```jsonnet
 {
-  "term_id": 2
+  "term_id": 2,
+  "term": 3
 }
 ```
 
  | |
 -:|:-
 **term_id**<br> <font color="#939da3">integer</font> | Номер продукта.
+**term**<br> <font color="#939da3">integer</font> | Срок займа в месяцах.
 
 ### Response Parameters
 
@@ -868,14 +874,15 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
  <td colspan="2" style="text-align:right">**loan_application**<br> <font color="#939da3">string</font> | |
 
-## GET loan_requests/{token}/documents/{kind}
+## GET loan_requests/{token}/documents/{kind}.{format}
 
 ```ruby
 GET BASE_URL/api/loans/v1/loan_requests/{token}/documents/{kind}.{pdf|html}
 ```
 
-Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html.
+Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html (по умолчанию).
 
+### Kind Parameters
  | |
 -:|:-
 **[asp]**<br> <font color="#939da3">file</font> | Согласие использование аналога собственноручной подписи (АСП), т.е. согласие использовать смс код вместо ручной подписи.
