@@ -882,7 +882,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/documents/{kind}.{pdf|html}
 
 Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html (по умолчанию).
 
-### Kind Parameters
+### Kind values
  | |
 -:|:-
 **[asp]**<br> <font color="#939da3">file</font> | Согласие использование аналога собственноручной подписи (АСП), т.е. согласие использовать смс код вместо ручной подписи.
@@ -900,4 +900,9 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/documents/{kind}.{pdf|html}
 
 # What's new
 
-Здесь будет размещаться информация об изменениях в API.
+23.08.2018
+1. Added `missing_documents` to `GET client`. Represent client photo files that are missing for client.
+2. Added `term_id` to `GET loan_request` and `POST loan_request/loan` to specify exact loan products.
+3. Added `agree_sms_info` flag to `POST loan/finalization`. Used to specify if client wants to use sms-information feature.
+4. Added `sms_info` to `GET loan_requests/{token}` to specify sms-information price for product calculation.
+5. Added `store_id` to `POST loan_requests` to specify store order for further matching.
