@@ -225,7 +225,7 @@ POST BASE_URL/api/loans/v1/sessions
 ## POST loan_requests
 
 ```ruby
-POST BASE_URL/api/loans/v1/loan_requests
+POST BASE_URL/api/loans/v1/loan_requests/{token}
 ```
 
 Метод для создания завки на займ. Возвращает `{token}` заявки.
@@ -542,7 +542,6 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
 | | | | | |
 -:|-:|-:|:-|:-|:-
  | **client**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о клиенте.
- <td colspan="2" style="text-align:right">**id**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.
  <td colspan="2" style="text-align:right">**mobile_phone**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).
  <td colspan="2" style="text-align:right">**first_name**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Имя клиента.
  <td colspan="2" style="text-align:right">**middle_name**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Отчество клиента.
@@ -572,7 +571,6 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  {
    "client":
    {
-     "id": 1,
      "mobile_phone": "79998887776",
      "first_name": "Иван",
      "middle_name": "Иванович",
