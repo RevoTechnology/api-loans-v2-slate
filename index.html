@@ -509,7 +509,7 @@
   <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
   <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
  -->
-<h2 id='post-loan_requests'>POST loan_requests</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span>
+<h2 id='post-loan_requests'>POST loan_requests</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span>
 </code></pre>
 <p>Метод для создания завки на займ. Возвращает <code>{token}</code> заявки.</p>
 <h3 id='parameters-2'>Parameters</h3>
@@ -1103,13 +1103,6 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>id</strong><br> <font color="#939da3">integer</font></td>
-<td style="text-align: right"></td>
-<td style="text-align: right"><td colspan="2" style="text-align:left"> Уникальный идентификатор клиента.</td>
-<td style="text-align: left"></td>
-<td style="text-align: left"></td>
-</tr>
-<tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Мобильный телефон клиента из 11 цифр (с кодом страны).</td>
@@ -1257,7 +1250,6 @@
 <pre class="highlight jsonnet tab-jsonnet"><code> <span class="p">{</span>
    <span class="s">"client"</span><span class="p">:</span>
    <span class="p">{</span>
-     <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
      <span class="s">"mobile_phone"</span><span class="p">:</span> <span class="s">"79998887776"</span><span class="p">,</span>
      <span class="s">"first_name"</span><span class="p">:</span> <span class="s">"Иван"</span><span class="p">,</span>
      <span class="s">"middle_name"</span><span class="p">:</span> <span class="s">"Иванович"</span><span class="p">,</span>
@@ -1877,11 +1869,11 @@
 </tbody></table>
 <h1 id='what-39-s-new'>What&#39;s new</h1>
 <p>23.08.2018
-1. Added <code>missing_documents</code> to <code>GET client</code>. Represent client photo files that are missing for client.
-2. Added <code>term_id</code> to <code>GET loan_request</code> and <code>POST loan_request/loan</code> to specify exact loan products.
-3. Added <code>agree_sms_info</code> flag to <code>POST loan/finalization</code>. Used to specify if client wants to use sms-information feature.
-4. Added <code>sms_info</code> to <code>GET loan_requests/{token}</code> to specify sms-information price for product calculation.
-5. Added <code>store_id</code> to <code>POST loan_requests</code> to specify store order for further matching.</p>
+1. Added <code>missing_documents</code> to <code>GET client</code>. Represent client photo files that are missing for client.<br>
+2. Added <code>term_id</code> to <code>GET loan_request</code> and <code>POST loan_request/loan</code> to specify exact loan products.<br>
+3. Added <code>agree_sms_info</code> flag to <code>POST loan/finalization</code>. Used to specify if client wants to use sms-information feature.<br>
+4. Added <code>sms_info</code> to <code>GET loan_requests/{token}</code> to specify sms-information price for product calculation.<br>
+5. Added <code>store_id</code> to <code>POST loan_requests</code> to specify store order for further matching.<br></p>
 
       </div>
       <div class="dark-box">
