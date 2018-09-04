@@ -535,6 +535,16 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
         "issuing_authority_code": "770001"
       }
     ]
+  },
+  "provider_data":
+  {    
+    "juicy_scoring":
+    {
+      "cookie": "w.0.5145137109623541.1478243476134",
+      "ip": "192.168.0.1",
+      "user_agent": "chrome58",
+      "referrer": "www.mvideo.ru/..."
+     }
   }
 }
 ```
@@ -562,6 +572,12 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string, *optional*</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
+ | **provider_data**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о поставщике данных.
+ <td colspan="2" style="text-align:right">**juicy_scoring**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о параметрах JuicyScore.
+ <td colspan="3" style="text-align:right">**cookie**<br> <font color="#939da3">string</font> | | | Идентификатор куки JuicyScore (поля JuicyLabsSession или jslbrc).
+ <td colspan="3" style="text-align:right">**ip**<br> <font color="#939da3">string</font> | | | IP адрес клиента.
+ <td colspan="3" style="text-align:right">**user_agent**<br> <font color="#939da3">string</font> | | | Браузер клиента.
+ <td colspan="3" style="text-align:right">**referrer**<br> <font color="#939da3">string</font> | | | Страница, с которой пришёл клиент.
 
 ###Response Parameters
 
@@ -646,7 +662,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
 PATCH  BASE_URL/api/loans/v1/loan_requests/{token}/client
 ```
 
-Метод для загрузки фотографий клиента. Используется multipart/form-data.
+Метод для загрузки фотографий клиента. Используется multipart/form-data. Например, client[documents][name].
 
 ###Parameters
 
@@ -898,7 +914,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/documents/{kind}.{pdf|html}
 
 # What's new
 
-23.08.2018
+23.08.2018<br>
 1. Added `missing_documents` to `GET client`. Represent client photo files that are missing for client.<br>
 2. Added `term_id` to `GET loan_request` and `POST loan_request/loan` to specify exact loan products.<br>
 3. Added `agree_sms_info` flag to `POST loan/finalization`. Used to specify if client wants to use sms-information feature.<br>
