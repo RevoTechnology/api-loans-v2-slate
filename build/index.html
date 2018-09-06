@@ -742,7 +742,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='put-loan_requests-token'>PUT loan_requests/{token}</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span>
+<h2 id='put-loan_requests-token'>PUT loan_requests/{token}</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span><span class="err">/</span><span class="p">{</span><span class="nx">token</span><span class="p">}</span>
 </code></pre>
 <p>Метод для обновления информации по займу, например суммы или мобильного телефона.</p>
 <h3 id='parameters-3'>Parameters</h3>
@@ -910,49 +910,49 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -966,7 +966,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>missing_documents</strong><br> <font color="#939da3">array</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>missing_documents</strong><br> <font color="#939da3">array, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента.</td>
 <td style="text-align: left"></td>
@@ -1001,21 +1001,21 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Дата выдачи паспорта в формате <code>dd-mm-yyyy</code>.</td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Орган, выдавший паспорт.</td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Код подразделения, выдавшего паспорт.</td>
@@ -1047,7 +1047,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-client'>POST loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+<h2 id='post-loan_requests-token-client'>POST loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
 </code></pre>
 <p>Метод для создания клиента с персональными данными.</p>
 <h3 id='parameters-4'>Parameters</h3>
@@ -1064,14 +1064,6 @@
     <span class="s">"last_name"</span><span class="p">:</span> <span class="s">"Иванов"</span><span class="p">,</span>
     <span class="s">"birth_date"</span><span class="p">:</span> <span class="s">"01-01-1990"</span><span class="p">,</span>
     <span class="s">"email"</span><span class="p">:</span> <span class="s">"user@example.com"</span><span class="p">,</span>
-    <span class="s">"pesel"</span><span class="p">:</span> <span class="s">"81010200131"</span><span class="p">,</span>
-    <span class="s">"area"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
-    <span class="s">"settlement"</span><span class="p">:</span> <span class="s">"Москва"</span><span class="p">,</span>
-    <span class="s">"street"</span><span class="p">:</span> <span class="s">"Новая"</span><span class="p">,</span>
-    <span class="s">"house"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
-    <span class="s">"building"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
-    <span class="s">"apartment"</span><span class="p">:</span> <span class="s">"123"</span><span class="p">,</span>
-    <span class="s">"postal_code"</span><span class="p">:</span> <span class="s">"12345"</span><span class="p">,</span>
     <span class="s">"id_documents"</span><span class="p">:</span>
     <span class="p">[</span>
       <span class="p">{</span>
@@ -1155,49 +1147,49 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1417,7 +1409,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>area</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Область по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1425,7 +1417,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>settlement</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Город по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1433,7 +1425,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>street</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1441,7 +1433,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>house</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1449,7 +1441,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>building</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1457,7 +1449,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>apartment</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1465,7 +1457,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>postal_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.</td>
 <td style="text-align: left"></td>
@@ -1513,7 +1505,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issue_date</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Дата выдачи паспорта в формате <code>dd-mm-yyyy</code>.</td>
@@ -1521,7 +1513,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Орган, выдавший паспорт.</td>
@@ -1529,7 +1521,7 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>issuing_authority_code</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Код подразделения, выдавшего паспорт.</td>
