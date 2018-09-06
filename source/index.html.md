@@ -470,7 +470,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
- <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array, *optional*</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента.
+ <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array, *optional*</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента. Возможные значения такие же как у метода <a href="#patch-loan_requests-token-client">PATCH loan_requests/{token}/client</a>: `client_with_passport`, `living_addr`, `name`.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
@@ -679,9 +679,6 @@ PATCH  BASE_URL/api/loans/v1/loan_requests/{token}/client
  **[name]**<br> <font color="#939da3">file</font> | Фото первого разворота паспорта.
  **[living_addr]**<br> <font color="#939da3">file</font> | Фото паспорта со страницей регистрации.
  **[client_with_passport]**<br> <font color="#939da3">file</font> | Фото клиента с паспортом.
- **[previous_passport]**<br> <font color="#939da3">file</font> | Фото предыдущего имени клиента.
- **[issued_by]**<br> <font color="#939da3">file</font> | Фото страницы "кем выдан" паспорт.
- **[first_two_pages]**<br> <font color="#939da3">file</font> | Фото первых двух страниц паспорта.
 
 ###Response Parameters
 
