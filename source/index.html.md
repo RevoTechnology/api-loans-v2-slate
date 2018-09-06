@@ -361,7 +361,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
 ## PUT loan_requests/{token}
 
 ```jsonnet  
-PUT BASE_URL/api/loans/v1/loan_requests
+PUT BASE_URL/api/loans/v1/loan_requests/{token}
 ```
 
 Метод для обновления информации по займу, например суммы или мобильного телефона.
@@ -460,22 +460,22 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
  <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
  <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Email клиента.
- <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
- <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента.
+ <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array, *optional*</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
  <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
- <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
- <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string</font> | | | Орган, выдавший паспорт.
- <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string</font> | | | Код подразделения, выдавшего паспорт.
+ <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string, *optional*</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
+ <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
+ <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
 
 > Пример ответа при неуспешной аутентификации (code 422).
 
@@ -496,7 +496,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
 ## POST loan_requests/{token}/client
 
 ```ruby
-GET BASE_URL/api/loans/v1/loan_requests/{token}/client
+POST BASE_URL/api/loans/v1/loan_requests/{token}/client
 ```
 
 Метод для создания клиента с персональными данными.
@@ -516,14 +516,6 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
     "last_name": "Иванов",
     "birth_date": "01-01-1990",
     "email": "user@example.com",
-    "pesel": "81010200131",
-    "area": "Москва",
-    "settlement": "Москва",
-    "street": "Новая",
-    "house": "123",
-    "building": "123",
-    "apartment": "123",
-    "postal_code": "12345",
     "id_documents":
     [
       {
@@ -558,13 +550,13 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
  <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
  <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Email клиента.
- <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
- <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+ <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
@@ -639,21 +631,21 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
   <td colspan="2" style="text-align:right">**last_name**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Фамилия клиента.
   <td colspan="2" style="text-align:right">**birth_date**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Дата рождения клиента в формате `dd-mm-yyyy`.
   <td colspan="2" style="text-align:right">**email**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Email клиента.
-  <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
-  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**area**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Область по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**settlement**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Город по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**street**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Улица по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**house**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер дома по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
   <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
   <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
   <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
   <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
   <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
-  <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
-  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string</font> | | | Орган, выдавший паспорт.
-  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string</font> | | | Код подразделения, выдавшего паспорт.
+  <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string, *optional*</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
+  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
+  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
   | **errors**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию об ошибках.
 
 ## PATCH loan_requests/{token}/client
