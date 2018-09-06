@@ -239,7 +239,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}
   "loan_request":
   {
     "store_id": "1234",
-    "order_id": "R2424"
+    "order_id": "R2424",
+    "employee_id": "R2D2"
   }
 }
 ```
@@ -249,6 +250,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Идентификатор заявки по системе Рево.
+  <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
 
 ###Response Parameters
 
