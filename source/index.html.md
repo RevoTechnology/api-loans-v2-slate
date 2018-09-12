@@ -225,7 +225,7 @@ POST BASE_URL/api/loans/v1/sessions
 ## POST loan_requests
 
 ```ruby
-POST BASE_URL/api/loans/v1/loan_requests/{token}
+POST BASE_URL/api/loans/v1/loan_requests/
 ```
 
 Метод для создания завки на займ. Возвращает `{token}` заявки.
