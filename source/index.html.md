@@ -250,7 +250,7 @@ POST BASE_URL/api/loans/v1/loan_requests
  |**loan_request**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
-  <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
+  <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
 
 ###Response Parameters
 
@@ -421,7 +421,6 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
 {
   "client":
   {
-    "id": 1,
     "mobile_phone": "79998887776",
     "first_name": "Иван",
     "middle_name": "Иванович",
@@ -511,7 +510,6 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
 {
   "client":
   {
-    "id": 1,
     "mobile_phone": "79998887776",
     "first_name": "Иван",
     "middle_name": "Иванович",
