@@ -565,7 +565,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
  | **provider_data**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о поставщике данных.
- <td colspan="2" style="text-align:right">**juicy_scoring**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о параметрах JuicyScore.
+ <td colspan="2" style="text-align:right">**juicy_scoring**<br> <font color="#939da3">object, *optional*</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о параметрах JuicyScore.
  <td colspan="3" style="text-align:right">**cookie**<br> <font color="#939da3">string</font> | | | Идентификатор куки JuicyScore (поля JuicyLabsSession или jslbrc).
  <td colspan="3" style="text-align:right">**ip**<br> <font color="#939da3">string</font> | | | IP адрес клиента.
  <td colspan="3" style="text-align:right">**user_agent**<br> <font color="#939da3">string</font> | | | Браузер клиента.
