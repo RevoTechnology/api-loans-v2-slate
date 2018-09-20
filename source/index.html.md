@@ -500,7 +500,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
 POST BASE_URL/api/loans/v1/loan_requests/{token}/client
 ```
 
-Метод для создания клиента с персональными данными.
+Метод для создания клиента с персональными данными и получения решения по лимиту.
 
 ### Parameters
 
@@ -593,6 +593,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
      "building": "123",
      "apartment": "123",
      "postal_code": "12345",
+     "credit_decision": "approved",
      "credit_limit": "33000.00",
      "id_documents":
      [
@@ -638,6 +639,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
   <td colspan="2" style="text-align:right">**building**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Строение по месту регистрации клиента.
   <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
   <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
+  <td colspan="2" style="text-align:right">**credit_decision**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left">  Решение по лимиту. Возможные значения: `approved` - лимит одобрен; `declined` - лимит не одобрен.
   <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
   <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
   <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
