@@ -437,7 +437,8 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
     "credit_limit": 33000.00,
     "missing_documents": ["name"],
     "id_documents":
-    [
+    {
+      "russian_passport":
       {
         "series": "7711",
         "number": "123456",
@@ -446,7 +447,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
         "issuing_authority": "МВД России по г.Москва",
         "issuing_authority_code": "770001"
       }
-    ]
+    }
   }
 }
 ```
@@ -517,7 +518,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
     "birth_date": "01-01-1990",
     "email": "user@example.com",
     "id_documents":
-    [
+    {
+      "russian_passport":
       {
         "series": "7711",
         "number": "123456",
@@ -526,7 +528,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
         "issuing_authority": "МВД России по г.Москва",
         "issuing_authority_code": "770001"
       }
-    ]
+    }
   },
   "provider_data":
   {    
@@ -596,7 +598,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
      "credit_decision": "approved",
      "credit_limit": "33000.00",
      "id_documents":
-     [
+     {
+       "russian_passport":
        {
          "series": "7711",
          "number": "123456",
@@ -605,7 +608,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
          "issuing_authority": "МВД России по г.Москва",
          "issuing_authority_code": "770001"
        }
-     ]
+     }
    }
  }
  ```
