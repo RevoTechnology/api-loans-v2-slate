@@ -504,7 +504,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
 
 ### Parameters
 
-> Пример ответа при успешной аутентификации (code 200).
+> Пример запроса в формате json
 
 ```jsonnet
 {
