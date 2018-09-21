@@ -853,7 +853,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
   {
     "agree_sms_info": "1",
     "agree_processing": "1",
-    "confirmation_code": 8888
+    "confirmation_code": "8888"
   }
 }
 ```
@@ -863,7 +863,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
  |**loan**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию о займе.
   <td colspan="2" style="text-align:right">**agree_sms_info**<br> <font color="#939da3">string</font> | | Согласие клиента с подключением платного смс-информирования.
   <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">string</font> | | Согласие клиента с оформлением договора.
-  <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">int</font> | | Четырёхзначный код подтверждения.
+  <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Четырёхзначный код подтверждения.
 
 ###Response Parameters
 
