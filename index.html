@@ -986,6 +986,13 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>russian_passport</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
 <td style="text-align: right"><td colspan="3" style="text-align:right"><strong>series</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
@@ -1205,6 +1212,13 @@
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>id_documents</strong><br> <font color="#939da3">object</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>russian_passport</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
@@ -1492,6 +1506,14 @@
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>id_documents</strong><br> <font color="#939da3">object</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>russian_passport</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
@@ -1803,9 +1825,9 @@
 <pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
   <span class="s">"loan"</span><span class="p">:</span>
   <span class="p">{</span>
-    <span class="s">"agree_sms_info"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s">"agree_processing"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="s">"1111"</span>
+    <span class="s">"agree_sms_info"</span><span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
+    <span class="s">"agree_processing"</span><span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
+    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="mi">8888</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -1822,17 +1844,17 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию о займе.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>agree_sms_info</strong><br> <font color="#939da3">boolean</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>agree_sms_info</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Согласие клиента с подключением платного смс-информирования.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>agree_processing</strong><br> <font color="#939da3">boolean</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>agree_processing</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Согласие клиента с оформлением договора.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>confirmation_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>confirmation_code</strong><br> <font color="#939da3">int</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Четырёхзначный код подтверждения.</td>
 </tr>
