@@ -472,6 +472,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
  <td colspan="2" style="text-align:right">**missing_documents**<br> <font color="#939da3">array, *optional*</font> | | <td colspan="2" style="text-align:left"> Список документов, которых не хватает у клиента. Возможные значения такие же как у метода <a href="#patch-loan_requests-token-client">PATCH loan_requests/{token}/client</a>: `client_with_passport`, `living_addr`, `name`.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+ <td colspan="2" style="text-align:right">**russian_passport**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
  <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
@@ -560,6 +561,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="2" style="text-align:right">**apartment**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Номер квартиры по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**postal_code**<br> <font color="#939da3">string, *optional*</font> | | <td colspan="2" style="text-align:left"> Почтовый индекс по месту регистрации клиента.
  <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+ <td colspan="2" style="text-align:right">**russian_passport**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.
  <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
  <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
  <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string, *optional*</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
@@ -645,6 +647,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
   <td colspan="2" style="text-align:right">**credit_decision**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left">  Решение по лимиту. Возможные значения: `approved` - лимит одобрен; `declined` - лимит не одобрен.
   <td colspan="2" style="text-align:right">**credit_limit**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Лимит клиента в руб с копейками.
   <td colspan="2" style="text-align:right">**id_documents**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о документах клиента.
+  <td colspan="2" style="text-align:right">**russian_passport**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о паспорте РФ.
   <td colspan="3" style="text-align:right">**series**<br> <font color="#939da3">string</font> | | | Серия паспорта клиента.
   <td colspan="3" style="text-align:right">**number**<br> <font color="#939da3">string</font> | | | Номер паспорта клиента.
   <td colspan="3" style="text-align:right">**expiry_date**<br> <font color="#939da3">string</font> | | | Дата окончания действия паспорта в формате `dd-mm-yyyy`.
