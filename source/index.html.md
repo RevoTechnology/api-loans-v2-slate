@@ -240,7 +240,8 @@ POST BASE_URL/api/loans/v1/loan_requests
   {
     "store_id": "1234",
     "order_id": "R2424",
-    "employee_id": "R2D2"
+    "employee_id": "R2D2",
+    "preferred_term": 7
   }
 }
 ```
@@ -251,6 +252,7 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
   <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
+  <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
 
 ###Response Parameters
 
@@ -529,6 +531,10 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
         "issuing_authority": "МВД России по г.Москва",
         "issuing_authority_code": "770001"
       }
+    },
+    "work_info":
+    {
+      "monthly_salary": 80000.00
     }
   },
   "provider_data":
@@ -568,6 +574,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="3" style="text-align:right">**issue_date**<br> <font color="#939da3">string, *optional*</font> | | | Дата выдачи паспорта в формате `dd-mm-yyyy`.
  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
+ <td colspan="2" style="text-align:right">**work_info**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о работе клиента.
+ <td colspan="3" style="text-align:right">**monthly_salary**<br> <font color="#939da3">float</font> | | | Месячная зарплата в рублях.
  | **provider_data**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о поставщике данных.
  <td colspan="2" style="text-align:right">**juicy_scoring**<br> <font color="#939da3">object, *optional*</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о параметрах JuicyScore.
  <td colspan="3" style="text-align:right">**cookie**<br> <font color="#939da3">string</font> | | | Идентификатор куки JuicyScore (поля JuicyLabsSession или jslbrc).
