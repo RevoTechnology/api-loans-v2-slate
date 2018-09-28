@@ -545,7 +545,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
     },
     "work_info":
     {
-      "monthly_salary": 80000.00
+      "monthly_income": 80000.00
     }
   },
   "provider_data":
@@ -586,7 +586,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/client
  <td colspan="3" style="text-align:right">**issuing_authority**<br> <font color="#939da3">string, *optional*</font> | | | Орган, выдавший паспорт.
  <td colspan="3" style="text-align:right">**issuing_authority_code**<br> <font color="#939da3">string, *optional*</font> | | | Код подразделения, выдавшего паспорт.
  <td colspan="2" style="text-align:right">**work_info**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о работе клиента.
- <td colspan="3" style="text-align:right">**monthly_salary**<br> <font color="#939da3">float</font> | | | Месячная зарплата в рублях.
+ <td colspan="3" style="text-align:right">**monthly_income**<br> <font color="#939da3">float</font> | | | Ежемесячный доход в рублях.
  | **provider_data**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о поставщике данных.
  <td colspan="2" style="text-align:right">**juicy_scoring**<br> <font color="#939da3">object, *optional*</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о параметрах JuicyScore.
  <td colspan="3" style="text-align:right">**cookie**<br> <font color="#939da3">string</font> | | | Идентификатор куки JuicyScore (поля JuicyLabsSession или jslbrc).
