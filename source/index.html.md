@@ -290,7 +290,7 @@ POST BASE_URL/api/loans/v1/loan_requests
 GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
 ```
 
-Метод для получения доступных графиков платежей для заявки. Для расчёта графика платежей для суммы покупок `AMOUNT` используется переменная `amount`. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">loan_request</a>).
+Метод для получения доступных графиков платежей по заявке. Для расчёта графика платежей для произвольной суммы используется переменная `AMOUNT` в заголовке. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">loan_request</a>). Если для указанной суммы нет ни одного подходящего тарифа, возвращается пустой массив.
 
 Если в заявке не указан номер телефона, то расчёт графика платежей производится как для нового клиента.
 
@@ -303,13 +303,16 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
   "loan_request":
   [
     {
-      "term_id": 2,
       "term": 3,
+      "term_id": 2,
       "monthly_payment": 2945,
       "total_of_payments": 8833,
       "sum_with_discount": 6399,
       "total_overpayment": 2434,
       "sms_info": 59.0,
+      "min_amount": 2000,
+      "max_amount": 10000,
+      "product_code": "R",
       "schedule":
       [
         {
@@ -333,13 +336,16 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
 | | | | | |
 -:|-:|-:|:-|:-|:-
  | **loan_request**<br> <font color="#939da3">object</font> | | <td colspan="3"> Объект, содержащий информацию о расчёте доступных продуктов.
- <td colspan="2" style="text-align:right">**term_id**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Номер продукта.
  <td colspan="2" style="text-align:right">**term**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Срок займа в месяцах.
+ <td colspan="2" style="text-align:right">**term_id**<br> <font color="#939da3">integer</font> | | <td colspan="2" style="text-align:left"> Номер продукта.
  <td colspan="2" style="text-align:right">**monthly_payment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Величина ежемесячного платежа с учётом переплаты.
  <td colspan="2" style="text-align:right">**total_of_payments**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма к погашению займа (с учётом переплат).
  <td colspan="2" style="text-align:right">**sum_with_discount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).
  <td colspan="2" style="text-align:right">**total_overpayment**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Общая сумма переплаты за весь период займа.
  <td colspan="2" style="text-align:right">**sms_info**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость услуги смс-информирования.
+ <td colspan="2" style="text-align:right">**min_amount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Минимальная сумма в рамках данного тарифа.
+ <td colspan="2" style="text-align:right">**max_amount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Максимальная сумма в рамках данного тарифа.
+ <td colspan="2" style="text-align:right">**product_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Код продукта, содержащий дополнительную информацию.
  <td colspan="2" style="text-align:right">**schedule**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о графике платежей.
  <td colspan="3" style="text-align:right">**date**<br> <font color="#939da3">string</font> | | | Дата платежа в формате `dd-mm-yyyy`.
  <td colspan="3" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | | Величина платежа клиента в месяц в рублях с копейками. Последний платёж может отличаться от предыдущих.
