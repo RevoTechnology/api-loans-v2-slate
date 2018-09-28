@@ -605,7 +605,7 @@
 </tbody></table>
 <h2 id='get-loan_requests-token'>GET loan_requests/{token}</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}?</span><span class="n">amount</span><span class="o">=</span><span class="no">AMOUNT</span>
 </code></pre>
-<p>Метод для получения доступных графиков платежей для заявки. Для расчёта графика платежей для суммы покупок <code>AMOUNT</code> используется переменная <code>amount</code>. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">loan_request</a>).</p>
+<p>Метод для получения доступных графиков платежей по заявке. Для расчёта графика платежей для произвольной суммы используется переменная <code>AMOUNT</code> в заголовке. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">loan_request</a>). Если для указанной суммы нет ни одного подходящего тарифа, возвращается пустой массив.</p>
 
 <p>Если в заявке не указан номер телефона, то расчёт графика платежей производится как для нового клиента.</p>
 <h3 id='response-parameters-4'>Response Parameters</h3>
@@ -616,13 +616,16 @@
   <span class="s">"loan_request"</span><span class="p">:</span>
   <span class="p">[</span>
     <span class="p">{</span>
-      <span class="s">"term_id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
       <span class="s">"term"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s">"term_id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
       <span class="s">"monthly_payment"</span><span class="p">:</span> <span class="mi">2945</span><span class="p">,</span>
       <span class="s">"total_of_payments"</span><span class="p">:</span> <span class="mi">8833</span><span class="p">,</span>
       <span class="s">"sum_with_discount"</span><span class="p">:</span> <span class="mi">6399</span><span class="p">,</span>
       <span class="s">"total_overpayment"</span><span class="p">:</span> <span class="mi">2434</span><span class="p">,</span>
       <span class="s">"sms_info"</span><span class="p">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s">"min_amount"</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+      <span class="s">"max_amount"</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+      <span class="s">"product_code"</span><span class="p">:</span> <span class="s">"R"</span><span class="p">,</span>
       <span class="s">"schedule"</span><span class="p">:</span>
       <span class="p">[</span>
         <span class="p">{</span>
@@ -659,16 +662,16 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>term_id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>term</strong><br> <font color="#939da3">integer</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: right"><td colspan="2" style="text-align:left"> Номер продукта.</td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Срок займа в месяцах.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>term</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>term_id</strong><br> <font color="#939da3">integer</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: right"><td colspan="2" style="text-align:left"> Срок займа в месяцах.</td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Номер продукта.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
@@ -704,6 +707,27 @@
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>sms_info</strong><br> <font color="#939da3">float</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"><td colspan="2" style="text-align:left"> Стоимость услуги смс-информирования.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>min_amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Минимальная сумма в рамках данного тарифа.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>max_amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Максимальная сумма в рамках данного тарифа.</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>product_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Код продукта, содержащий дополнительную информацию.</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
