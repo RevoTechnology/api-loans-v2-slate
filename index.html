@@ -1093,6 +1093,11 @@
 <h2 id='post-loan_requests-token-client'>POST loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
 </code></pre>
 <p>Метод для создания клиента с персональными данными и получения решения по лимиту.</p>
+
+<aside class="notice">
+Для получения гарантированного одобрения необходимо в качестве фамилии клиента использовать "Одобрено".<br>
+Для получения гарантированного отказа необходимо в качестве фамилии клиента использовать "Отказано".
+</aside>
 <h3 id='parameters-4'>Parameters</h3>
 <blockquote>
 <p>Пример запроса в формате json</p>
