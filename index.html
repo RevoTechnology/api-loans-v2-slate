@@ -554,7 +554,7 @@
 <td style="text-align: left">Идентификатор консультанта (агента) по системе Партнёра.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>employee_id</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>Preferred_term</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Предпочтительный для клиента срок оплаты частями.</td>
 </tr>
@@ -1125,7 +1125,7 @@
     <span class="p">},</span>
     <span class="s">"work_info"</span><span class="p">:</span>
     <span class="p">{</span>
-      <span class="s">"monthly_salary"</span><span class="p">:</span> <span class="mf">80000.00</span>
+      <span class="s">"monthly_income"</span><span class="p">:</span> <span class="mf">80000.00</span>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="s">"provider_data"</span><span class="p">:</span>
@@ -1311,10 +1311,10 @@
 <td style="text-align: left"></td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>monthly_salary</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"><td colspan="3" style="text-align:right"><strong>monthly_income</strong><br> <font color="#939da3">float</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: right"></td>
-<td style="text-align: left">Месячная зарплата в рублях.</td>
+<td style="text-align: left">Ежемесячный доход в рублях.</td>
 <td style="text-align: left"></td>
 </tr>
 <tr>
@@ -1880,7 +1880,8 @@
   <span class="p">{</span>
     <span class="s">"agree_sms_info"</span><span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
     <span class="s">"agree_processing"</span><span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
-    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="s">"8888"</span>
+    <span class="s">"confirmation_code"</span><span class="p">:</span> <span class="s">"8888"</span><span class="p">,</span>
+    <span class="s">"employee_id"</span><span class="p">:</span> <span class="s">"R2D2"</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -1910,6 +1911,11 @@
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>confirmation_code</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Четырёхзначный код подтверждения.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>employee_id</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Идентификатор консультанта (агента) по системе Партнёра.</td>
 </tr>
 </tbody></table>
 <h3 id='response-parameters-13'>Response Parameters</h3>
