@@ -252,7 +252,7 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
   <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
-  <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
+  <td colspan="2" style="text-align:right">**Preferred_term**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
 
 ###Response Parameters
 
