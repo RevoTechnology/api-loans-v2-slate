@@ -252,7 +252,7 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
   <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
-  <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
+  <td colspan="2" style="text-align:right">**preferred_term**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
 
 ###Response Parameters
 
@@ -872,7 +872,8 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
   {
     "agree_sms_info": "1",
     "agree_processing": "1",
-    "confirmation_code": "8888"
+    "confirmation_code": "8888",
+    "employee_id": "R2D2"
   }
 }
 ```
@@ -883,6 +884,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
   <td colspan="2" style="text-align:right">**agree_sms_info**<br> <font color="#939da3">string</font> | | Согласие клиента с подключением платного смс-информирования.
   <td colspan="2" style="text-align:right">**agree_processing**<br> <font color="#939da3">string</font> | | Согласие клиента с оформлением договора.
   <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Четырёхзначный код подтверждения.
+  <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
 
 ###Response Parameters
 
