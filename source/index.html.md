@@ -278,7 +278,7 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right"> **price**<br> <font color="#939da3">float</font> | | Цена товара.
   <td colspan="2" style="text-align:right"> **sale_price**<br> <font color="#939da3">float, *optional*</font> | | Цена товара со скидкой (если есть).
   <td colspan="2" style="text-align:right"> **quantity**<br> <font color="#939da3">integer</font> | | Количество товара.
-  <td colspan="2" style="text-align:right"> **unit**<br> <font color="#939da3">string</font> | | Единица измерения товара. Например, "шт.", "л.", "компл." и т.д.
+  <td colspan="2" style="text-align:right"> **unit**<br> <font color="#939da3">string, *optional*</font> | | Единица измерения товара. Например, "шт.", "л.", "компл." и т.д.
   <td colspan="2" style="text-align:right"> **brand**<br> <font color="#939da3">string, *optional*</font> | | Бренд товара.
   <td colspan="2" style="text-align:right"> **category**<br> <font color="#939da3">string, *optional*</font> | | Категория товара.
  |**work_info**<br> <font color="#939da3">object, *optional*</font> | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о работе клиента.
