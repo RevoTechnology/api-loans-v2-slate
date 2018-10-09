@@ -522,8 +522,21 @@
     <span class="s">"store_id"</span><span class="p">:</span> <span class="s">"1234"</span><span class="p">,</span>
     <span class="s">"order_id"</span><span class="p">:</span> <span class="s">"R2424"</span><span class="p">,</span>
     <span class="s">"employee_id"</span><span class="p">:</span> <span class="s">"R2D2"</span><span class="p">,</span>
-    <span class="s">"preferred_term"</span><span class="p">:</span> <span class="mi">7</span>
+    <span class="s">"preferred_term"</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s">"product_type"</span><span class="p">:</span> <span class="s">"R"</span><span class="p">,</span>
+    <span class="s">"prepayment_amount"</span><span class="p">:</span> <span class="mf">1000.00</span>
   <span class="p">},</span>
+  <span class="s">"cart_items"</span><span class="p">:</span>
+<span class="p">[{</span>
+    <span class="s">"sku"</span><span class="p">:</span> <span class="s">"23543"</span><span class="p">,</span>
+    <span class="s">"name"</span><span class="p">:</span> <span class="s">"Чехол фирменный"</span><span class="p">,</span>
+    <span class="s">"price"</span><span class="p">:</span> <span class="mi">3500</span><span class="p">,</span>
+    <span class="s">"sale_price"</span><span class="p">:</span> <span class="mi">2999</span><span class="p">,</span>
+    <span class="s">"quantity"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">"unit"</span><span class="p">:</span> <span class="s">"шт."</span><span class="p">,</span>
+    <span class="s">"brand"</span> <span class="p">:</span> <span class="s">"Samsung"</span><span class="p">,</span>
+    <span class="s">"category"</span><span class="p">:</span> <span class="s">"Accessories"</span>
+<span class="p">}],</span>
   <span class="s">"work_info"</span><span class="p">:</span>
   <span class="p">{</span>
     <span class="s">"monthly_income"</span><span class="p">:</span> <span class="mf">80000.00</span>
@@ -558,9 +571,64 @@
 <td style="text-align: left">Идентификатор консультанта (агента) по системе Партнёра.</td>
 </tr>
 <tr>
-<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>Preferred_term</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>preferred_term</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Предпочтительный для клиента срок оплаты частями.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>product_type</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Тип продукта: &quot;R&quot; - рассрочка, &quot;C&quot; - кредит.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>prepayment_amount</strong><br> <font color="#939da3">int, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Предоплата или первоначальный взнос клиента в рублях.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>cart_items</strong><br> <font color="#939da3">object, <em>optional</em></font></td>
+<td style="text-align: left"><td colspan="2"> Объект, содержащий массив с информацией о заказе.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>sku</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Складская учётная единица (stock keeping unit).</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Наименование товара.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>price</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Цена товара.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>sale_price</strong><br> <font color="#939da3">float, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Цена товара со скидкой (если есть).</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>quantity</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Количество товара.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>unit</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Единица измерения товара. Например, &quot;шт.&quot;, &quot;л.&quot;, &quot;компл.&quot; и т.д.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>brand</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Бренд товара.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"> <strong>category</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Категория товара.</td>
 </tr>
 <tr>
 <td style="text-align: right"></td>
