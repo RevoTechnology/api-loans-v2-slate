@@ -242,7 +242,7 @@ POST BASE_URL/api/loans/v1/loan_requests
     "order_id": "R2424",
     "employee_id": "R2D2",
     "preferred_term": 7,
-    "product_type": "R",
+    "product_code": "R",
     "prepayment_amount": 1000.00
   },
   "cart_items":
@@ -270,8 +270,8 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
   <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
   <td colspan="2" style="text-align:right">**preferred_term**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
-  <td colspan="2" style="text-align:right">**product_type**<br> <font color="#939da3">int, *optional*</font> | | Тип продукта: "R" - рассрочка, "C" - кредит.
-  <td colspan="2" style="text-align:right">**prepayment_amount**<br> <font color="#939da3">int, *optional*</font> | | Предоплата или первоначальный взнос клиента в рублях.
+  <td colspan="2" style="text-align:right">**product_code**<br> <font color="#939da3">string, *optional*</font> | | Код продукта, содержащий дополнительную информацию (`R` - рассрочка, `C` - кредит).
+  <td colspan="2" style="text-align:right">**prepayment_amount**<br> <font color="#939da3">float, *optional*</font> | | Предоплата или первоначальный взнос клиента в рублях.
   |**cart_items**<br> <font color="#939da3">object, *optional*</font> |<td colspan="2"> Объект, содержащий массив с информацией о заказе.
   <td colspan="2" style="text-align:right"> **sku**<br> <font color="#939da3">string, *optional*</font> | | Складская учётная единица (stock keeping unit).
   <td colspan="2" style="text-align:right"> **name**<br> <font color="#939da3">string</font> | | Наименование товара.
@@ -375,7 +375,7 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}?amount=AMOUNT
  <td colspan="2" style="text-align:right">**sms_info**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Стоимость услуги смс-информирования.
  <td colspan="2" style="text-align:right">**min_amount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Минимальная сумма в рамках данного тарифа.
  <td colspan="2" style="text-align:right">**max_amount**<br> <font color="#939da3">float</font> | | <td colspan="2" style="text-align:left"> Максимальная сумма в рамках данного тарифа.
- <td colspan="2" style="text-align:right">**product_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Код продукта, содержащий дополнительную информацию.
+ <td colspan="2" style="text-align:right">**product_code**<br> <font color="#939da3">string</font> | | <td colspan="2" style="text-align:left"> Код продукта, содержащий дополнительную информацию (`R` - рассрочка, `C` - кредит).
  <td colspan="2" style="text-align:right">**schedule**<br> <font color="#939da3">object</font> | | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о графике платежей.
  <td colspan="3" style="text-align:right">**date**<br> <font color="#939da3">string</font> | | | Дата платежа в формате `dd-mm-yyyy`.
  <td colspan="3" style="text-align:right">**amount**<br> <font color="#939da3">float</font> | | | Величина платежа клиента в месяц в рублях с копейками. Последний платёж может отличаться от предыдущих.
