@@ -241,8 +241,21 @@ POST BASE_URL/api/loans/v1/loan_requests
     "store_id": "1234",
     "order_id": "R2424",
     "employee_id": "R2D2",
-    "preferred_term": 7
+    "preferred_term": 7,
+    "product_type": "R",
+    "prepayment_amount": 1000.00
   },
+  "cart_items":
+[{
+    "sku": "23543",
+    "name": "Чехол фирменный",
+    "price": 3500,
+    "sale_price": 2999,
+    "quantity": 1,
+    "unit": "шт.",
+    "brand" : "Samsung",
+    "category": "Accessories"
+}],
   "work_info":
   {
     "monthly_income": 80000.00
@@ -256,7 +269,18 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right">**store_id**<br> <font color="#939da3">string</font> | | Идентификатор торговой точки. Создается на стороне Рево.
   <td colspan="2" style="text-align:right">**order_id**<br> <font color="#939da3">string</font> | | Уникальный (в пределах магазина) идентификатор заявки. Задаётся Партнёром.
   <td colspan="2" style="text-align:right">**employee_id**<br> <font color="#939da3">string, *optional*</font> | | Идентификатор консультанта (агента) по системе Партнёра.
-  <td colspan="2" style="text-align:right">**Preferred_term**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
+  <td colspan="2" style="text-align:right">**preferred_term**<br> <font color="#939da3">int, *optional*</font> | | Предпочтительный для клиента срок оплаты частями.
+  <td colspan="2" style="text-align:right">**product_type**<br> <font color="#939da3">int, *optional*</font> | | Тип продукта: "R" - рассрочка, "C" - кредит.
+  <td colspan="2" style="text-align:right">**prepayment_amount**<br> <font color="#939da3">int, *optional*</font> | | Предоплата или первоначальный взнос клиента в рублях.
+  |**cart_items**<br> <font color="#939da3">object, *optional*</font> |<td colspan="2"> Объект, содержащий массив с информацией о заказе.
+  <td colspan="2" style="text-align:right"> **sku**<br> <font color="#939da3">string, *optional*</font> | | Складская учётная единица (stock keeping unit).
+  <td colspan="2" style="text-align:right"> **name**<br> <font color="#939da3">string</font> | | Наименование товара.
+  <td colspan="2" style="text-align:right"> **price**<br> <font color="#939da3">float</font> | | Цена товара.
+  <td colspan="2" style="text-align:right"> **sale_price**<br> <font color="#939da3">float, *optional*</font> | | Цена товара со скидкой (если есть).
+  <td colspan="2" style="text-align:right"> **quantity**<br> <font color="#939da3">integer</font> | | Количество товара.
+  <td colspan="2" style="text-align:right"> **unit**<br> <font color="#939da3">string</font> | | Единица измерения товара. Например, "шт.", "л.", "компл." и т.д.
+  <td colspan="2" style="text-align:right"> **brand**<br> <font color="#939da3">string, *optional*</font> | | Бренд товара.
+  <td colspan="2" style="text-align:right"> **category**<br> <font color="#939da3">string, *optional*</font> | | Категория товара.
  |**work_info**<br> <font color="#939da3">object, *optional*</font> | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о работе клиента.
   <td colspan="2" style="text-align:right">**monthly_income**<br> <font color="#939da3">float, *optional*</font> | | Ежемесячный доход в рублях.
 
