@@ -300,7 +300,7 @@
 </aside>
 <h2 id='3b61794258'>Параметры авторизации</h2>
 <p>Для авторизации обращения к методам API используется <code>authentication_token</code>, который генерируется путём создания сессии с помощью метода <a href="#post-sessions">sessions</a>.
-<code>login</code> и <code>password</code> необходимые для этого метода создаются на стороне Рево.</p>
+<code>login</code> и <code>password</code> необходимые для этого метода создаются на стороне Рево. Аворизационный токен передаётся в headers с ключём Authorization при обращении ко всем методам данного API.</p>
 <h1 id='api'>Методы API</h1><h2 id='post-sessions'>POST sessions</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
 </code></pre>
 <p>Метод для создания сессии пользователя (консультанта). Возвращает <code>authentication_token</code>, который необходим для авторизации обращения к другим методам API.</p>
