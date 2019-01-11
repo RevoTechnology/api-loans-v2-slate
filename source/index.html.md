@@ -25,12 +25,12 @@ API Loans реализовано на протоколе HTTPS на основе
 
 ```javascript
 BASE_URL = "https://r.revo.ru/"
-BASE_URL = "https://demo.revoup.ru/"
+BASE_URL = "https://backend.demo.revoup.ru/"
 ```
 
 1. Для взаимодействия с сервисами Рево используются 2 базовых адреса:
  * https://r.revo.ru/ - адрес `production` сервиса.
- * https://demo.revoup.ru/ - адрес `demo` сервиса.
+ * https://backend.demo.revoup.ru/ - адрес `demo` сервиса.
 2. `BASE_URL` - переменная обозначающая базовый адрес.
 
 <aside class="notice">
