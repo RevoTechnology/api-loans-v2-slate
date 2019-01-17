@@ -259,6 +259,15 @@ POST BASE_URL/api/loans/v1/loan_requests
   "work_info":
   {
     "monthly_income": 80000.00
+  },
+  "additional_data_broker":
+  {
+    "previous_url": "https://revo.ru/where-to-buy",
+    "channel": "mobile",
+    "returning_customer": true,
+    "last_client_decision": "18.12.2017",
+    "last_request_decision": "2",
+    "issued_loans": "1"
   }
 }
 ```
@@ -283,6 +292,13 @@ POST BASE_URL/api/loans/v1/loan_requests
   <td colspan="2" style="text-align:right"> **category**<br> <font color="#939da3">string, *optional*</font> | | Категория товара.
  |**work_info**<br> <font color="#939da3">object, *optional*</font> | <td colspan="2" style="text-align:left"> Объект, содержащий информацию о работе клиента.
   <td colspan="2" style="text-align:right">**monthly_income**<br> <font color="#939da3">float, *optional*</font> | | Ежемесячный доход в рублях.
+ |**additional_data_broker**<br> <font color="#939da3">object, *optional*</font> | <td colspan="2" style="text-align:left"> Объект для передачи дополнительных данных.
+  <td colspan="2" style="text-align:right">**previous_url**<br> <font color="#939da3">string, *optional*</font> | | Сайт, откуда клиент зашел на сайт партнёра.
+  <td colspan="2" style="text-align:right">**channel**<br> <font color="#939da3">string, *optional*</font> | | В каком канале открыта форма. Возможные значения: `mobile`, `app`, `desktop`.
+  <td colspan="2" style="text-align:right">**returning_customer**<br> <font color="#939da3">bool, *optional*</font> | | Является ли клиент повторным для партнера.
+  <td colspan="2" style="text-align:right">**last_client_decision**<br> <font color="#939da3">string, *optional*</font> | | Только для повторного клиента: дата последнего решения по клиенту. Возможные значения: точная дата в формате `ДД.ММ.ГГГГ`, интервалы: `1` — менее месяца назад, `2` — от одного до трех месяцев назад, `3` — от трех до шести месяцев назад, `4` — от шести и более месяцев назад.
+  <td colspan="2" style="text-align:right">**last_request_decision**<br> <font color="#939da3">string, *optional*</font> | | Решение по последней заявке клиента. Возможные значения: `0` — отрицательное, `1` — положительное у одного кредитора, `2` — положительное у двух и более кредиторов.
+  <td colspan="2" style="text-align:right">**issued_loans**<br> <font color="#939da3">string, *optional*</font> | | Количество выданных за последний год кредитных продуктов.
 
 ###Response Parameters
 
