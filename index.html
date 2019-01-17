@@ -540,6 +540,15 @@
   <span class="s">"work_info"</span><span class="p">:</span>
   <span class="p">{</span>
     <span class="s">"monthly_income"</span><span class="p">:</span> <span class="mf">80000.00</span>
+  <span class="p">},</span>
+  <span class="s">"additional_data_broker"</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s">"previous_url"</span><span class="p">:</span> <span class="s">"https://revo.ru/where-to-buy"</span><span class="p">,</span>
+    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"mobile"</span><span class="p">,</span>
+    <span class="s">"returning_customer"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s">"last_client_decision"</span><span class="p">:</span> <span class="s">"18.12.2017"</span><span class="p">,</span>
+    <span class="s">"last_request_decision"</span><span class="p">:</span> <span class="s">"2"</span><span class="p">,</span>
+    <span class="s">"issued_loans"</span><span class="p">:</span> <span class="s">"1"</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -639,6 +648,41 @@
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>monthly_income</strong><br> <font color="#939da3">float, <em>optional</em></font></td>
 <td style="text-align: right"></td>
 <td style="text-align: left">Ежемесячный доход в рублях.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>additional_data_broker</strong><br> <font color="#939da3">object, <em>optional</em></font></td>
+<td style="text-align: left"><td colspan="2" style="text-align:left"> Объект для передачи дополнительных данных.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>previous_url</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Сайт, откуда клиент зашел на сайт партнёра.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>channel</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">В каком канале открыта форма. Возможные значения: <code>mobile</code>, <code>app</code>, <code>desktop</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>returning_customer</strong><br> <font color="#939da3">bool, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Является ли клиент повторным для партнера.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>last_client_decision</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Только для повторного клиента: дата последнего решения по клиенту. Возможные значения: точная дата в формате <code>ДД.ММ.ГГГГ</code>, интервалы: <code>1</code> — менее месяца назад, <code>2</code> — от одного до трех месяцев назад, <code>3</code> — от трех до шести месяцев назад, <code>4</code> — от шести и более месяцев назад.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>last_request_decision</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Решение по последней заявке клиента. Возможные значения: <code>0</code> — отрицательное, <code>1</code> — положительное у одного кредитора, <code>2</code> — положительное у двух и более кредиторов.</td>
+</tr>
+<tr>
+<td style="text-align: right"><td colspan="2" style="text-align:right"><strong>issued_loans</strong><br> <font color="#939da3">string, <em>optional</em></font></td>
+<td style="text-align: right"></td>
+<td style="text-align: left">Количество выданных за последний год кредитных продуктов.</td>
 </tr>
 </tbody></table>
 <h3 id='response-parameters-3'>Response Parameters</h3>
