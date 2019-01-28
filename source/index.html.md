@@ -928,6 +928,15 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
 
 ###Response Parameters
 
+> Пример ответа при успешной аутентификации (code 200).
+
+  ```jsonnet
+  {
+    "offer_id": "692693557"
+  }
+  ```
+
+
 > Пример ответа при неуспешном запросе (code 422).
 
 ```jsonnet
@@ -943,6 +952,7 @@ POST BASE_URL/api/loans/v1/loan_requests/{token}/loan/finalization
 
 | | | |
 -:|-:|:-|:-
+ |**offer_id**<br> <font color="#939da3">string</font> | <td colspan="2"> Номер договора оферты (индивидуальные условия потребительского займа).
  |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
  <td colspan="2" style="text-align:right">**loan_application**<br> <font color="#939da3">string</font> | |
 
