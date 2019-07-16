@@ -267,13 +267,13 @@
                   <li>
                     <a href="#get-loan_requests-token-documents-kind-format" class="toc-h2 toc-link" data-title="get-loan_requests-token-documents-kind-format">GET loan_requests/{token}/documents/{kind}.{format}</a>
                   </li>
+                  <li>
+                    <a href="#patch-loan_requests-token-loan-bill" class="toc-h2 toc-link" data-title="patch-loan_requests-token-loan-bill">PATCH loan_requests/{token}/loan/bill</a>
+                  </li>
               </ul>
           </li>
           <li>
             <a href="#cb76858662" class="toc-h1 toc-link" data-title="">Коды ошибок</a>
-          </li>
-          <li>
-            <a href="#what-39-s-new" class="toc-h1 toc-link" data-title="what-s-new">What's new</a>
           </li>
       </div>
     </div>
@@ -2028,6 +2028,13 @@
 </tbody></table>
 <h3 id='response-parameters-13'>Response Parameters</h3>
 <blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code>  <span class="p">{</span>
+    <span class="s">"offer_id"</span><span class="p">:</span> <span class="s">"692693557"</span>
+  <span class="p">}</span>
+</code></pre>
+<blockquote>
 <p>Пример ответа при неуспешном запросе (code 422).</p>
 </blockquote>
 <pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
@@ -2046,6 +2053,11 @@
 <th style="text-align: left"></th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>offer_id</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2"> Номер договора оферты (индивидуальные условия потребительского займа).</td>
+</tr>
 <tr>
 <td style="text-align: right"></td>
 <td style="text-align: right"><strong>errors</strong><br> <font color="#939da3">object</font></td>
@@ -2084,6 +2096,30 @@
 <td style="text-align: left">Согласие на взаимодействие с третьими лицами, направленное на возврат просроченной задолженности.</td>
 </tr>
 </tbody></table>
+<h2 id='patch-loan_requests-token-loan-bill'>PATCH loan_requests/{token}/loan/bill</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">bill</span>
+</code></pre>
+<p>Метод для подтверждения выполнения договорных условий со стороны торговца. Запускает финансирование торговца по данному кредитному договору, в случае, если требуется дополнительное подтверждение.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+ <span class="err">“</span><span class="nx">loan</span><span class="err">”</span><span class="p">:</span> <span class="p">{</span>
+   <span class="err">“</span><span class="nx">bill</span><span class="err">”</span><span class="p">:</span> <span class="kc">true</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right"><strong>bill</strong><br> <font color="#939da3">boolean</font></td>
+<td style="text-align: left">Флаг подтверждения.</td>
+</tr>
+</tbody></table>
 <h1 id='cb76858662'>Коды ошибок</h1>
 <table><thead>
 <tr>
@@ -2097,20 +2133,13 @@
 </tr>
 <tr>
 <td style="text-align: right"><strong>400</strong></td>
-<td style="text-align: left">Некорректный формат json запроса.</td>
+<td style="text-align: left">Заявка не найдена.</td>
 </tr>
 <tr>
 <td style="text-align: right"><strong>422</strong></td>
 <td style="text-align: left">В запросе содержится ошибка. Описание конкретных полей, где содержатся ошибки, находятся в массиве <code>errors</code>.</td>
 </tr>
 </tbody></table>
-<h1 id='what-39-s-new'>What&#39;s new</h1>
-<p>23.08.2018<br>
-1. Added <code>missing_documents</code> to <code>GET client</code>. Represent client photo files that are missing for client.<br>
-2. Added <code>term_id</code> to <code>GET loan_request</code> and <code>POST loan_request/loan</code> to specify exact loan products.<br>
-3. Added <code>agree_sms_info</code> flag to <code>POST loan/finalization</code>. Used to specify if client wants to use sms-information feature.<br>
-4. Added <code>sms_info</code> to <code>GET loan_requests/{token}</code> to specify sms-information price for product calculation.<br>
-5. Added <code>store_id</code> to <code>POST loan_requests</code> to specify store order for further matching.<br></p>
 
       </div>
       <div class="dark-box">

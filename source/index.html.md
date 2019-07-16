@@ -986,15 +986,55 @@ GET BASE_URL/api/loans/v1/loan_requests/{token}/loan/bill
 
 ```jsonnet
 {
- “loan”: {
-   “bill”: true
- }
+  “loan”:
+  {
+    “bill”: true
+  }
 }
 ```
  | |
 -:|:-
 **bill**<br> <font color="#939da3">boolean</font> | Флаг подтверждения.
 
+###Response Parameters
+
+> Пример ответа при успешной аутентификации (code 200).
+
+```jsonnet
+{  
+  "offer_id": "692693557",
+  "status": "confirmed"
+}
+```
+
+
+> Пример ответа при неуспешном запросе (code 422).
+
+```jsonnet
+{  
+  "errors":
+  {  
+    "bill": ["не может быть пустым"]
+  }
+}
+```
+
+> Пример ответа при неуспешном запросе (code 404).
+
+```jsonnet
+{  
+   "errors":
+  {  
+    "loan_request": ["заявка не найдена"],
+    "loan_application": ["займ не найден"]
+  }
+}
+```
+
+| | | |
+-:|-:|:-|:-
+ |**offer_id**<br> <font color="#939da3">string</font> | <td colspan="2"> Номер договора оферты (индивидуальные условия потребительского займа).
+ |**status**<br> <font color="#939da3">string</font> | <td colspan="2"> Статус кредитного договора. Возможные значения: `confirmed` — подтвержден, `already_confirmed` — уже подтвержден, `already_cancelled` — уже отменен.
 
 # Коды ошибок
 
