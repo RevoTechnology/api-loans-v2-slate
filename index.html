@@ -2104,9 +2104,10 @@
 <p>Пример запроса в формате json</p>
 </blockquote>
 <pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
- <span class="err">“</span><span class="nx">loan</span><span class="err">”</span><span class="p">:</span> <span class="p">{</span>
-   <span class="err">“</span><span class="nx">bill</span><span class="err">”</span><span class="p">:</span> <span class="kc">true</span>
- <span class="p">}</span>
+  <span class="err">“</span><span class="nx">loan</span><span class="err">”</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="err">“</span><span class="nx">bill</span><span class="err">”</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 <table><thead>
@@ -2118,6 +2119,54 @@
 <tr>
 <td style="text-align: right"><strong>bill</strong><br> <font color="#939da3">boolean</font></td>
 <td style="text-align: left">Флаг подтверждения.</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters-14'>Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>  
+  <span class="s">"offer_id"</span><span class="p">:</span> <span class="s">"692693557"</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"confirmed"</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешном запросе (code 422).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>  
+  <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>  
+    <span class="s">"bill"</span><span class="p">:</span> <span class="p">[</span><span class="s">"не может быть пустым"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Пример ответа при неуспешном запросе (code 404).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>  
+   <span class="s">"errors"</span><span class="p">:</span>
+  <span class="p">{</span>  
+    <span class="s">"loan_request"</span><span class="p">:</span> <span class="p">[</span><span class="s">"заявка не найдена"</span><span class="p">],</span>
+    <span class="s">"loan_application"</span><span class="p">:</span> <span class="p">[</span><span class="s">"займ не найден"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>offer_id</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2"> Номер договора оферты (индивидуальные условия потребительского займа).</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>status</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2"> Статус кредитного договора. Возможные значения: <code>confirmed</code> — подтвержден, <code>already_confirmed</code> — уже подтвержден, <code>already_cancelled</code> — уже отменен.</td>
 </tr>
 </tbody></table>
 <h1 id='cb76858662'>Коды ошибок</h1>
