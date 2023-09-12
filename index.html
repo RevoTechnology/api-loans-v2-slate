@@ -270,18 +270,6 @@
                   <li>
                     <a href="#patch-loan_requests-token-loan-bill" class="toc-h2 toc-link" data-title="patch-loan_requests-token-loan-bill">Loan bill</a>
                   </li>
-                  <li>
-                    <a href="#get-orders" class="toc-h2 toc-link" data-title="get-orders">Return Loan ID</a>
-                  </li>
-                  <li>
-                    <a href="#post-returns" class="toc-h2 toc-link" data-title="post-returns">Return creation</a>
-                  </li>
-                  <li>
-                    <a href="#post-returns-id-confirm" class="toc-h2 toc-link" data-title="post-returns-id-confirm">Return confirmation</a>
-                  </li>
-                  <li>
-                    <a href="#post-returns-id-cancel" class="toc-h2 toc-link" data-title="post-returns-id-cancel">Return cancelation</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -298,7 +286,7 @@
 <span class="nx">BASE_URL</span> <span class="o">=</span> <span class="s2">"https://backend.demo.revoup.ru/"</span>
 </code></pre>
 <ol>
-<li>Для взаимодействия с сервисами Рево используются 2 базовых адреса:
+<li>Для взаимодействия с сервисами Мокка используются 2 базовых адреса:
 
 <ul>
 <li>https://r.revo.ru/ - адрес <code>production</code> сервиса.</li>
@@ -312,8 +300,8 @@
 </aside>
 <h2 id='3b61794258'>Параметры авторизации</h2>
 <p>Для авторизации обращения к методам API используется <code>authentication_token</code>, который генерируется путём создания сессии с помощью метода <a href="#post-sessions">sessions</a>.
-<code>login</code> и <code>password</code> необходимые для этого метода создаются на стороне Рево. Аворизационный токен передаётся в headers с ключём Authorization при обращении ко всем методам данного API.</p>
-<h1 id='api'>Методы API</h1><h2 id='post-sessions'>POST sessions</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
+<code>login</code> и <code>password</code> необходимые для этого метода создаются на стороне Mokka. Аворизационный токен передаётся в headers с ключём Authorization при обращении ко всем методам данного API.</p>
+<h1 id='api'>Методы API</h1><h2 id='post-sessions'>Create session</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
 </code></pre>
 <p>Метод для создания сессии пользователя (консультанта). Возвращает <code>authentication_token</code>, который необходим для авторизации обращения к другим методам API.</p>
 <h3 id='parameters'>Parameters</h3>
@@ -390,7 +378,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-sessions'>DELETE sessions</h2><pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
+<h2 id='delete-sessions'>Delete session</h2><pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
 </code></pre>
 <p>Метод для закрытия сессии пользователя (консультанта).</p>
 <h3 id='response-parameters-2'>Response Parameters</h3>
@@ -579,7 +567,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>store_id</strong><br> <font color="#939da3">string</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: left">Идентификатор торговой точки. Создается на стороне Рево.</td>
+<td style="text-align: left">Идентификатор торговой точки. Создается на стороне Mokka.</td>
 </tr>
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>order_id</strong><br> <font color="#939da3">string</font></td>
@@ -830,7 +818,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>sum_with_discount</strong><br> <font color="#939da3">float</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: right"><td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).</td>
+<td style="text-align: right"><td colspan="2" style="text-align:left"> Стоимость товаров в рублях с копейками с учётом комиссии Mokka (скидки, предоставляемой партнёром).</td>
 <td style="text-align: left"></td>
 <td style="text-align: left"></td>
 </tr>
@@ -951,7 +939,7 @@
 <tr>
 <td style="text-align: right"><td colspan="2" style="text-align:right"><strong>amount</strong><br> <font color="#939da3">float</font></td>
 <td style="text-align: right"></td>
-<td style="text-align: left">Стоимость товаров в рублях с копейками с учётом комиссии Рево (скидки, предоставляемой партнёром).</td>
+<td style="text-align: left">Стоимость товаров в рублях с копейками с учётом комиссии Mokka (скидки, предоставляемой партнёром).</td>
 </tr>
 </tbody></table>
 <h3 id='response-parameters-6'>Response Parameters</h3>
