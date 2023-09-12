@@ -729,9 +729,9 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='get-loan_requests-token'>GET loan_requests/{token}</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}?</span><span class="n">amount</span><span class="o">=</span><span class="no">AMOUNT</span>
+<h2 id='get-loan_requests-token'>Loan request schedule</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}?</span><span class="n">amount</span><span class="o">=</span><span class="no">AMOUNT</span>
 </code></pre>
-<p>Метод для получения доступных графиков платежей по заявке. Для расчёта графика платежей для произвольной суммы используется переменная <code>AMOUNT</code> в заголовке. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">loan_request</a>). Если для указанной суммы нет ни одного подходящего тарифа, возвращается пустой массив.</p>
+<p>Метод для получения доступных графиков платежей по заявке. Для расчёта графика платежей для произвольной суммы используется переменная <code>AMOUNT</code> в заголовке. Если она не указана, значение суммы покупки берётся из заявки (проставляется методом <a href="#put-loan_requests-token">Loan request update</a>). Если для указанной суммы нет ни одного подходящего тарифа, возвращается пустой массив.</p>
 
 <p>Если в заявке не указан номер телефона, то расчёт графика платежей производится как для нового клиента.</p>
 <h3 id='response-parameters-4'>Response Parameters</h3>
@@ -904,7 +904,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='put-loan_requests-token'>PUT loan_requests/{token}</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span><span class="err">/</span><span class="p">{</span><span class="nx">token</span><span class="p">}</span>
+<h2 id='put-loan_requests-token'>Loan request update</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span><span class="err">/</span><span class="p">{</span><span class="nx">token</span><span class="p">}</span>
 </code></pre>
 <p>Метод для обновления информации по займу, например суммы или мобильного телефона.</p>
 <h3 id='parameters-3'>Parameters</h3>
@@ -966,7 +966,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='get-loan_requests-token-client'>GET loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+<h2 id='get-loan_requests-token-client'>Client information</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
 </code></pre>
 <p>Метод для получения информации о клиенте. С помощью данного метода можно отличать повторных клиентов от новых: если в ответе с кодом 200 пришел пустой json <code>{}</code>, то клиент является новым; во всех остальных случаях - повторным.</p>
 <h3 id='response-parameters-7'>Response Parameters</h3>
@@ -1216,7 +1216,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-client'>POST loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+<h2 id='post-loan_requests-token-client'>Client creation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
 </code></pre>
 <p>Метод для создания клиента с персональными данными и получения решения по лимиту.</p>
 
@@ -1736,7 +1736,7 @@
 <td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h2 id='patch-loan_requests-token-client'>PATCH loan_requests/{token}/client</h2><pre class="highlight ruby tab-ruby"><code><span class="no">PATCH</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
+<h2 id='patch-loan_requests-token-client'>Client photo</h2><pre class="highlight ruby tab-ruby"><code><span class="no">PATCH</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">client</span>
 </code></pre>
 <p>Метод для загрузки фотографий клиента. Используется multipart/form-data. Например, client[documents][name].</p>
 <h3 id='parameters-5'>Parameters</h3>
@@ -1802,9 +1802,9 @@
 <td style="text-align: left">Тип загружаемого документа.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-confirmation'>POST loan_requests/{token}/confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
+<h2 id='post-loan_requests-token-confirmation'>Confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
 </code></pre>
-<p>Метод для подтверждения согласия с передачей персональных данных и верификации номера телефона клиента с помощью смс кода. Используется для существующих клиентов. Для новых клиентов код передаётся при создании клиента с помощью метода <a href="#post-loan_requests-token-client">loan_requests/{token}/client</a>.</p>
+<p>Метод для подтверждения согласия с передачей персональных данных и верификации номера телефона клиента с помощью смс кода. Используется для существующих клиентов. Для новых клиентов код передаётся при создании клиента с помощью метода <a href="#post-loan_requests-token-client">Client creation</a>.</p>
 <h3 id='parameters-6'>Parameters</h3>
 <blockquote>
 <p>Пример запроса в формате json</p>
@@ -1892,7 +1892,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-client-confirmation'>POST loan_requests/{token}/client/confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
+<h2 id='post-loan_requests-token-client-confirmation'>Client confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">confirmation</span>
 </code></pre>
 <p>Метод для отправки кода подтверждения клиенту по смс. Также используется для повторной отправки смс кода. Смс код используется как для верификации номера телефона (и согласия клиента с передачей персональных данных), так и для подтверждения займа при финализации.</p>
 <h3 id='response-parameters-11'>Response Parameters</h3>
@@ -1920,7 +1920,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-loan'>POST loan_requests/{token}/loan</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span>
+<h2 id='post-loan_requests-token-loan'>Loan application</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span>
 </code></pre>
 <p>Метод для создания займа.</p>
 <h3 id='parameters-7'>Parameters</h3>
@@ -1976,7 +1976,7 @@
 <td style="text-align: left">Информация по заявке.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-loan-finalization'>POST loan_requests/{token}/loan/finalization</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
+<h2 id='post-loan_requests-token-loan-finalization'>Loan confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
 </code></pre>
 <p>Метод для финализации заявки. В качестве смс кода может использоваться тот же код, что и для верификации номера телефона (и согласия клиента с передачей персональных данных).</p>
 <h3 id='parameters-8'>Parameters</h3>
@@ -2069,7 +2069,7 @@
 <td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h2 id='get-loan_requests-token-documents-kind-format'>GET loan_requests/{token}/documents/{kind}.{format}</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="p">{</span><span class="n">kind</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">pdf</span><span class="o">|</span><span class="n">html</span><span class="p">}</span>
+<h2 id='get-loan_requests-token-documents-kind-format'>Loan documents</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="p">{</span><span class="n">kind</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">pdf</span><span class="o">|</span><span class="n">html</span><span class="p">}</span>
 </code></pre>
 <p>Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html (по умолчанию).</p>
 <h3 id='kind-values'>Kind values</h3>
@@ -2096,7 +2096,7 @@
 <td style="text-align: left">Согласие на взаимодействие с третьими лицами, направленное на возврат просроченной задолженности.</td>
 </tr>
 </tbody></table>
-<h2 id='patch-loan_requests-token-loan-bill'>PATCH loan_requests/{token}/loan/bill</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">bill</span>
+<h2 id='patch-loan_requests-token-loan-bill'>Loan bill</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">bill</span>
 </code></pre>
 <p>Метод для подтверждения выполнения договорных условий со стороны торговца. Запускает финансирование торговца по данному кредитному договору, в случае, если требуется дополнительное подтверждение.</p>
 <h3 id='parameters-9'>Parameters</h3>
