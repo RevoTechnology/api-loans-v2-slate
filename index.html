@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Documentation</title>
+    <title>API Loans</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -229,46 +229,58 @@
             <a href="#api" class="toc-h1 toc-link" data-title="api">Методы API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#post-sessions" class="toc-h2 toc-link" data-title="post-sessions">POST sessions</a>
+                    <a href="#post-sessions" class="toc-h2 toc-link" data-title="post-sessions">Create session</a>
                   </li>
                   <li>
-                    <a href="#delete-sessions" class="toc-h2 toc-link" data-title="delete-sessions">DELETE sessions</a>
+                    <a href="#delete-sessions" class="toc-h2 toc-link" data-title="delete-sessions">Delete session</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests" class="toc-h2 toc-link" data-title="post-loan_requests">POST loan_requests</a>
+                    <a href="#post-loan_requests" class="toc-h2 toc-link" data-title="post-loan_requests">Loan request</a>
                   </li>
                   <li>
-                    <a href="#get-loan_requests-token" class="toc-h2 toc-link" data-title="get-loan_requests-token">GET loan_requests/{token}</a>
+                    <a href="#get-loan_requests-token" class="toc-h2 toc-link" data-title="get-loan_requests-token">Loan request schedule</a>
                   </li>
                   <li>
-                    <a href="#put-loan_requests-token" class="toc-h2 toc-link" data-title="put-loan_requests-token">PUT loan_requests/{token}</a>
+                    <a href="#put-loan_requests-token" class="toc-h2 toc-link" data-title="put-loan_requests-token">Loan request update</a>
                   </li>
                   <li>
-                    <a href="#get-loan_requests-token-client" class="toc-h2 toc-link" data-title="get-loan_requests-token-client">GET loan_requests/{token}/client</a>
+                    <a href="#get-loan_requests-token-client" class="toc-h2 toc-link" data-title="get-loan_requests-token-client">Client information</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests-token-client" class="toc-h2 toc-link" data-title="post-loan_requests-token-client">POST loan_requests/{token}/client</a>
+                    <a href="#post-loan_requests-token-client" class="toc-h2 toc-link" data-title="post-loan_requests-token-client">Client creation</a>
                   </li>
                   <li>
-                    <a href="#patch-loan_requests-token-client" class="toc-h2 toc-link" data-title="patch-loan_requests-token-client">PATCH loan_requests/{token}/client</a>
+                    <a href="#patch-loan_requests-token-client" class="toc-h2 toc-link" data-title="patch-loan_requests-token-client">Client photo</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests-token-confirmation" class="toc-h2 toc-link" data-title="post-loan_requests-token-confirmation">POST loan_requests/{token}/confirmation</a>
+                    <a href="#post-loan_requests-token-confirmation" class="toc-h2 toc-link" data-title="post-loan_requests-token-confirmation">Confirmation</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests-token-client-confirmation" class="toc-h2 toc-link" data-title="post-loan_requests-token-client-confirmation">POST loan_requests/{token}/client/confirmation</a>
+                    <a href="#post-loan_requests-token-client-confirmation" class="toc-h2 toc-link" data-title="post-loan_requests-token-client-confirmation">Client confirmation</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests-token-loan" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan">POST loan_requests/{token}/loan</a>
+                    <a href="#post-loan_requests-token-loan" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan">Loan application</a>
                   </li>
                   <li>
-                    <a href="#post-loan_requests-token-loan-finalization" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan-finalization">POST loan_requests/{token}/loan/finalization</a>
+                    <a href="#post-loan_requests-token-loan-finalization" class="toc-h2 toc-link" data-title="post-loan_requests-token-loan-finalization">Loan confirmation</a>
                   </li>
                   <li>
-                    <a href="#get-loan_requests-token-documents-kind-format" class="toc-h2 toc-link" data-title="get-loan_requests-token-documents-kind-format">GET loan_requests/{token}/documents/{kind}.{format}</a>
+                    <a href="#get-loan_requests-token-documents-kind-format" class="toc-h2 toc-link" data-title="get-loan_requests-token-documents-kind-format">Loan documents</a>
                   </li>
                   <li>
-                    <a href="#patch-loan_requests-token-loan-bill" class="toc-h2 toc-link" data-title="patch-loan_requests-token-loan-bill">PATCH loan_requests/{token}/loan/bill</a>
+                    <a href="#patch-loan_requests-token-loan-bill" class="toc-h2 toc-link" data-title="patch-loan_requests-token-loan-bill">Loan bill</a>
+                  </li>
+                  <li>
+                    <a href="#get-orders" class="toc-h2 toc-link" data-title="get-orders">Return Loan ID</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns" class="toc-h2 toc-link" data-title="post-returns">Return creation</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns-id-confirm" class="toc-h2 toc-link" data-title="post-returns-id-confirm">Return confirmation</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns-id-cancel" class="toc-h2 toc-link" data-title="post-returns-id-cancel">Return cancelation</a>
                   </li>
               </ul>
           </li>
