@@ -270,6 +270,18 @@
                   <li>
                     <a href="#patch-loan_requests-token-loan-bill" class="toc-h2 toc-link" data-title="patch-loan_requests-token-loan-bill">Loan bill</a>
                   </li>
+                  <li>
+                    <a href="#get-orders" class="toc-h2 toc-link" data-title="get-orders">Loan application ID</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns" class="toc-h2 toc-link" data-title="post-returns">Loan bill</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns-id-confirm" class="toc-h2 toc-link" data-title="post-returns-id-confirm">Loan bill</a>
+                  </li>
+                  <li>
+                    <a href="#post-returns-id-cancel" class="toc-h2 toc-link" data-title="post-returns-id-cancel">Loan bill</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -378,7 +390,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-sessions'>Delete session</h2><pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
+<h2 id='delete-sessions'>Delete session</h2><pre class="highlight ruby tab-ruby"><code><span class="no">DELETE</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sessions</span>
 </code></pre>
 <p>Метод для закрытия сессии пользователя (консультанта).</p>
 <h3 id='response-parameters-2'>Response Parameters</h3>
@@ -403,112 +415,6 @@
 <td style="text-align: left"></td>
 </tr>
 </tbody></table>
-
-<!-- ##POST passwords
-
- ```ruby
- POST BASE_URL/passwords
- ```
-
- Метод для отправки кодя подтверждения пользователю (консультанту).
-
-###Parameters
- > Пример запроса в формате json
-
- ```jsonnet
- {
-   "user":
-   {
-     "login": "qwerty"
-   }
- }
- ```
-
- | | | |
- -:|-:|:-|:-
-  |**user**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об авторизуемом пользователе (консультанте).
-   <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя.
-
-###Response Parameters
-
-   > Пример ответа при неуспешной аутентификации (code 422).
-
-   ```jsonnet
-   {
-     "errors":
-     {
-       "login": ["логин не найден"]
-     }
-   }
-   ```
-
-   | | | |
-   -:|-:|:-|:-
-    |**authentication_token**<br> <font color="#939da3">string</font> | <td colspan="2"> Токен для последующего обращения к методам API.
-    |**errors**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об ошибках.
-    <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя ???
-
-## PUT passwords
-
-  ```ruby
-  PUT BASE_URL/passwords
-  ```
-  Метод для проверки кода подтверждения, установки нового ПИН-а и получения `api_key`.
-
-### Parameters
-
-  > Пример запроса в формате json
-
-  ```jsonnet
-  {
-    "user":
-    {
-      "login": "string",
-      "confirmation_code": "string",
-      "password": "string",
-      "password_confirmation": "string"
-    }
-  }
-  ```
-
-  | | | |
-  -:|-:|:-|:-
-   |**user**<br> <font color="#939da3">object</font> | <td colspan="2"> Объект, содержащий информацию об авторизуемом пользователе (консультанте).
-    <td colspan="2" style="text-align:right">**login**<br> <font color="#939da3">string</font> | | Логин пользователя.
-    <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
-    <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
-    <td colspan="2" style="text-align:right">**password_confirmation**<br> <font color="#939da3">string</font> | | Пароль подтверждения.
-
-###Response Parameters
-
-  > Пример ответа при успешной аутентификации (code 200).
-
-  ```jsonnet
-  {
-    "user":
-    {
-      "authentication_token": "string"
-    }
-  }
-  ```
-
-  > Пример ответа при неуспешной аутентификации (code 422).
-
-  ```jsonnet
-  {
-    "errors":
-    {
-      "confirmation_code": ["неверный"],
-      "password": ["должен быть равен 4 символам"]
-    }
-  }
-  ```
-
-  | | | |
-  -:|-:|:-|:-
-  <td colspan="2" style="text-align:right">**confirmation_code**<br> <font color="#939da3">string</font> | | Код подтверждения.
-  <td colspan="2" style="text-align:right">**password**<br> <font color="#939da3">sring</font> | | Пароль пользователя.
- -->
 <h2 id='post-loan_requests'>POST loan_requests</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span>
 </code></pre>
 <p>Метод для создания завки на займ. Возвращает <code>{token}</code> заявки.</p>
@@ -904,7 +810,7 @@
 <td style="text-align: left"><td colspan="2"> Объект, содержащий информацию об ошибках.</td>
 </tr>
 </tbody></table>
-<h2 id='put-loan_requests-token'>Loan request update</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="nx">PUT</span> <span class="nx">BASE_URL</span><span class="err">/</span><span class="nx">api</span><span class="err">/</span><span class="nx">loans</span><span class="err">/</span><span class="nx">v1</span><span class="err">/</span><span class="nx">loan_requests</span><span class="err">/</span><span class="p">{</span><span class="nx">token</span><span class="p">}</span>
+<h2 id='put-loan_requests-token'>Loan request update</h2><pre class="highlight jsonnet tab-jsonnet"><code><span class="no">PUT</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="p">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="o">{</span><span class="n">token</span><span class="o">}</span>
 </code></pre>
 <p>Метод для обновления информации по займу, например суммы или мобильного телефона.</p>
 <h3 id='parameters-3'>Parameters</h3>
@@ -1976,7 +1882,7 @@
 <td style="text-align: left">Информация по заявке.</td>
 </tr>
 </tbody></table>
-<h2 id='post-loan_requests-token-loan-finalization'>Loan confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
+<h2 id='post-loan_requests-token-loan-finalization'>Loan confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">POST</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">finalization</span>
 </code></pre>
 <p>Метод для финализации заявки. В качестве смс кода может использоваться тот же код, что и для верификации номера телефона (и согласия клиента с передачей персональных данных).</p>
 <h3 id='parameters-8'>Parameters</h3>
@@ -2069,7 +1975,7 @@
 <td style="text-align: left"></td>
 </tr>
 </tbody></table>
-<h2 id='get-loan_requests-token-documents-kind-format'>Loan documents</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="p">{</span><span class="n">kind</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">pdf</span><span class="o">|</span><span class="n">html</span><span class="p">}</span>
+<h2 id='get-loan_requests-token-documents-kind-format'>Loan documents</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="p">{</span><span class="n">kind</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">pdf</span><span class="o">|</span><span class="n">html</span><span class="p">}</span>
 </code></pre>
 <p>Метод для генерации юридических документов для клиента. Возвращает документ в формате pdf или html (по умолчанию).</p>
 <h3 id='kind-values'>Kind values</h3>
@@ -2096,7 +2002,7 @@
 <td style="text-align: left">Согласие на взаимодействие с третьими лицами, направленное на возврат просроченной задолженности.</td>
 </tr>
 </tbody></table>
-<h2 id='patch-loan_requests-token-loan-bill'>Loan bill</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">bill</span>
+<h2 id='patch-loan_requests-token-loan-bill'>Loan bill</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">loan_requests</span><span class="o">/</span><span class="p">{</span><span class="n">token</span><span class="p">}</span><span class="o">/</span><span class="n">loan</span><span class="o">/</span><span class="n">bill</span>
 </code></pre>
 <p>Метод для подтверждения выполнения договорных условий со стороны торговца. Запускает финансирование торговца по данному кредитному договору, в случае, если требуется дополнительное подтверждение.</p>
 <h3 id='parameters-9'>Parameters</h3>
@@ -2104,9 +2010,9 @@
 <p>Пример запроса в формате json</p>
 </blockquote>
 <pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
-  <span class="err">“</span><span class="nx">loan</span><span class="err">”</span><span class="p">:</span>
+  <span class="err">"</span><span class="nx">loan</span><span class="err">"</span><span class="p">:</span>
   <span class="p">{</span>
-    <span class="err">“</span><span class="nx">bill</span><span class="err">”</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="err">"</span><span class="nx">bill</span><span class="err">"</span><span class="p">:</span> <span class="kc">true</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -2169,6 +2075,99 @@
 <td style="text-align: left"><td colspan="2"> Статус кредитного договора. Возможные значения: <code>confirmed</code> — подтвержден, <code>already_confirmed</code> — уже подтвержден, <code>already_cancelled</code> — уже отменен.</td>
 </tr>
 </tbody></table>
+//////
+
+
+
+
+
+
+
+
+
+
+
+<h2 id='patch-loan_requests-token-loan-bill'>Loan application ID</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">orders</span><span class="o">/</span><span class="o">?</span><span class="n">store_id</span><span class="o">=</span><span class="p">{</span><span class="n">store_id</span><span class="p">}</span><span class="o">&</span><span class="n">filters</span><span class="p">[</span><span class="n">order_id</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="n">order_id</span><span class="p">}</span>
+</code></pre>
+<p>Метод для получения ID заявки на займ. Используется для осуществления возврата.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<h3 id='response-parameters-14'>Response Parameters</h3>
+<blockquote>
+<p>Пример ответа при успешной аутентификации (code 200).</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="err">"</span><span class="nx">orders</span><span class="err">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="err">"</span><span class="nx">id</span><span class="err">"</span><span class="p">:</span> <span class="kc">113978022</span>
+        <span class="err">"</span><span class="nx">client_name</span><span class="err">"</span><span class="p">:</span> <span class="kc">"Афанасьев Виталий Николаевич"</span>,
+        <span class="err">"</span><span class="nx">mobile_phone</span><span class="err">"</span><span class="p">:</span> <span class="kc">"9089929990"</span>,
+        <span class="err">"</span><span class="nx">barcode</span><span class="err">"</span><span class="p">:</span> <span class="kc">null</span>,
+        <span class="err">"</span><span class="nx">created_at</span><span class="err">"</span><span class="p">:</span> <span class="kc">"2023-09-06T11:46:06+03:00"</span>,
+        <span class="err">"</span><span class="nx">amount</span><span class="err">"</span><span class="p">:</span> <span class="kc">72871.0</span>,
+        <span class="err">"</span><span class="nx">remaining_amount</span><span class="err">"</span><span class="p">:</span> <span class="kc">72871.0</span>,
+        <span class="err">"</span><span class="nx">guid</span><span class="err">"</span><span class="p">:</span> <span class="kc">"618376246"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>orders</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"><td colspan="2"> Объект, содержащий информацию о займе.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>id</strong><br> <font color="#939da3">integer</font></td>
+<td style="text-align: left"><td colspan="2"> Уникальный идентификатор займа.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>client_name</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">ФИО клиента.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>mobile_phone</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Мобильный телефон клиента из 10 цифр (без кода страны).</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>barcode</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Номер штрихкода.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>created_at</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Дата создания займа в формате dd-mm-yyyy.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: left"><td colspan="2">Сумма займа.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>remaining_amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: left"><td colspan="2">Сумма оставшаяся к оплате.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>guid</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">ID договора займа.</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+///////
 <h1 id='cb76858662'>Коды ошибок</h1>
 <table><thead>
 <tr>
