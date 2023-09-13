@@ -2140,6 +2140,52 @@
 <h2 id='post-returns-id-confirm'>Return</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">returns</span>
 </code></pre>
 <p>Метод для создания заявки на частичный или полный возврат заказа. Возвращать можно только уже финализированный заказ. Частичный возврат можно провести не ранее, чем на следующий день после финализации.</p>
+<h3 id='response-parameters-14'> Parameters</h3>
+<blockquote>
+<p>Пример запроса в формате json</p>
+</blockquote>
+<pre class="highlight jsonnet tab-jsonnet"><code><span class="p">{</span>
+  <span class="err">"</span><span class="s">return</span><span class="err">"</span><span class="p">:</span>
+    <span class="p">{</span>
+        <span class="err">"</span><span class="s">order_id</span><span class="err">"</span><span class="p">:</span> <span class="s">"412"<"/span>
+        <span class="err">"</span><span class="s">confirmation_code</span><span class="err">"</span><span class="p">:</span> <span class="s">"skip"</span>,
+        <span class="err">"</span><span class="s">store_id</span><span class="err">"</span><span class="p">:</span> <span class="mi">267</span>,
+        <span class="err">"</span><span class="s">amount</span><span class="err">"</span><span class="p">:</span> <span class="mf">null</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>return</strong><br> <font color="#939da3">object</font></td>
+<td style="text-align: left"><td colspan="2">Объект, содержащий информацию о займе.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>order_id</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Уникальный идентификатор займа.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>confirmation_code</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Четырёхзначный код подтверждения.<code>skip</code> — пропуск ввода кода.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>store_id</strong><br> <font color="#939da3">string</font></td>
+<td style="text-align: left"><td colspan="2">Идентификатор торговой точки. Создается на стороне Mokka.</td>
+</tr>
+<tr>
+<td style="text-align: right"></td>
+<td style="text-align: right"><strong>amount</strong><br> <font color="#939da3">float</font></td>
+<td style="text-align: left"><td colspan="2">Сумма возврата.</td>
+</tr>
+</tbody></table>
 <h2 id='post-returns-id-confirm'>Return confirmation</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span>  <span class="no">BASE_URL</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">loans</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">returns</span><span class="o">/</span><span class="p">{</span><span class="n">loan_id</span><span class="p">}</span><span class="o">/</span><span class="n">confirm</span>
 </code></pre>
 <p>Метод для финализации заявки на возврат.</p>
